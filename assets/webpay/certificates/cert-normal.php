@@ -1,0 +1,96 @@
+<?php
+
+/**
+* @category   Plugins/SDK
+* @author     Allware Ltda. (http://www.allware.cl)
+* @copyright  2018 Transbank S.A. (http://www.transbank.cl)
+* @date       May 2018
+* @license    GNU LGPL
+* @version    2.0.4
+* @link       http://transbankdevelopers.cl/
+ */
+
+/** Contiene datos de integración para realizar pruebas de conectividad */
+return $certificate = array(
+
+    /** Ambiente */
+    "environment" => "PRODUCCION",
+
+    /** Llave Privada */
+    "private_key" => "-----BEGIN RSA PRIVATE KEY-----
+    MIIEowIBAAKCAQEAo79uLmwfW/asgsLTyx/g2wEmtrMfWDxk5ME39UeqQj3wxAy1
+    GdP++jaKBM4R/9PjBs2fqnv1UnnHVQMdYdCNs7B3SYwrE67A68qPnoOQ39yrdBI3
+    rRobAUq9IJjrXvKnX0/ZarYF9k1GU1Tdu6QBR5Jj/XCAj7z2fY493E7/V1UJ5lBO
+    f+k4xIyv5/oGOiqmI1UcKBvEkjvRyfAZhE9eenaztqxv4wwTNWMIT4UvQc7OqLNP
+    pqa/CfiNr9KKYsDoMkbIU9g+ugGh+wn9FnJk4wsKv+kMg0J1A3CVNqNa2CwQ7LJo
+    loYQcV2yEp4dJXgM1N5Jn3pFqShdwJf3ectr+wIDAQABAoIBAH1oTuoexKWZ9eTv
+    cWVPtNYFu7CQ3qClIGBR2plvmWXCKnL7iHePdOgMfQfRCtfzXxwGvxHCfc/8lDz3
+    dblEEEJeE/2v7A3W+MmdCQFNodbRGj569UkNhUEoDFC6zQiarrTAYrLnVQmdhQ6t
+    IGRk5tX5t7qSPuPWxLDED3x6w/QNYtWaG+SSvpro/VzhKGWGGttnNJrhZg4lXJf4
+    /ShRERuinrJNMo66AcCjagzHYX2AZjYlssv+XWb403/3of4TOaQbnoCQk2qx3A3Q
+    GIElhA0BxST4EpxRxGX1ARRIaoPHCxVxMNudivMY/oP+9uic1Wp0ksLetaca5w6o
+    sSJ18IECgYEA10r3aA1PWkjyqnNZIh0J2M0yF8s4/3no24Fj7gylQOPH2lemlsAc
+    tbSsNnhps4BhqtH0hMcmaqcSjmbGrto1b3PwvUOlZ0GbZSn7tmXVchCUMepX3SQg
+    keGq9yU48xsbzgGEkqdwGAN7YbAFPKBFe/QbRC6LXYR1ze99CMwLd0cCgYEAwrV6
+    G0D9vUfn6de025e1fMh1CBspb7yfILuAt/zGI+OeeZ8a4L8ly19kbJDBUSHLS4xC
+    YNt/I6PTVmV4YmZoGLyYdSveMf8F/SpFfdmCEsyPEr2WxvltnVGgiDtQIk+KGxzQ
+    m9im87FaRHxl0TihpIIMEsljJx0v1luXyqIgJ60CgYEAmo/dcrwrffvlC23oTc9f
+    JGCcV+y0LOWOwRfxcBNwCFf/QMewd4XQlrrw7+IesJm4hHRbAYAgGm17qvQqK5nI
+    xw0LhjUsaCb3svcjGN2fEVbJrdQ55C9tmo3Sub/lVNLfcVQxoz/F/9dwGr/N4qqF
+    d+nWMWrg7vCLyp7muwwSJz0CgYB+fUSxFdyBLYhkqqQsj/bv9I3K0VJu61t4+TZa
+    0FSsFf/qxMjCPos//l2QBc4AdfLKxniM0atbrN7rXooBasOvZj2oyPHVCvaKC/8P
+    DdFpgwhjRVUBOCLUs6WVOusJDyEKEgMXa3yyDYI1wZanf6HK7E0Jm1jVnSlpmSEY
+    G5DGFQKBgF9SAbgkL1SIgQoQ7Dgg/Fwcw1gHSuDbod8M+kktkS/7zQK8YWlVX2vI
+    zP4UfiYzyXrDBgL7xa//uZAyzGmbC4SD6aUF51HPAsqCEcb4/8NqnFsDZlXi9AMw
+    hJPpXcjJ2X8/Xg/GA7Np4jyN0PWiY9aA6gwFnddgguepWECDOTG2
+    -----END RSA PRIVATE KEY-----",
+
+    /** Certificado Publico */
+    "public_cert" => "-----BEGIN CERTIFICATE-----
+    MIIDPjCCAiYCCQDt2J/eFFfjaTANBgkqhkiG9w0BAQsFADBhMQswCQYDVQQGEwJD
+    TDETMBEGA1UECAwKU29tZS1TdGF0ZTETMBEGA1UEBwwKQ09OQ0VQQ0lPTjERMA8G
+    A1UECgwIUkVERUxFQ1QxFTATBgNVBAMMDDU5NzAzMzg3NDE0NjAeFw0xODA4MjQx
+    NDM4MjhaFw0yMjA4MjMxNDM4MjhaMGExCzAJBgNVBAYTAkNMMRMwEQYDVQQIDApT
+    b21lLVN0YXRlMRMwEQYDVQQHDApDT05DRVBDSU9OMREwDwYDVQQKDAhSRURFTEVD
+    VDEVMBMGA1UEAwwMNTk3MDMzODc0MTQ2MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+    MIIBCgKCAQEAo79uLmwfW/asgsLTyx/g2wEmtrMfWDxk5ME39UeqQj3wxAy1GdP+
+    +jaKBM4R/9PjBs2fqnv1UnnHVQMdYdCNs7B3SYwrE67A68qPnoOQ39yrdBI3rRob
+    AUq9IJjrXvKnX0/ZarYF9k1GU1Tdu6QBR5Jj/XCAj7z2fY493E7/V1UJ5lBOf+k4
+    xIyv5/oGOiqmI1UcKBvEkjvRyfAZhE9eenaztqxv4wwTNWMIT4UvQc7OqLNPpqa/
+    CfiNr9KKYsDoMkbIU9g+ugGh+wn9FnJk4wsKv+kMg0J1A3CVNqNa2CwQ7LJoloYQ
+    cV2yEp4dJXgM1N5Jn3pFqShdwJf3ectr+wIDAQABMA0GCSqGSIb3DQEBCwUAA4IB
+    AQATRPEZ7XQb4pwVZzIlvhZ/MBeHZAT1xygqLYxcsSAP7sRrrGuUoaDSOtZrCnck
+    an/XHMGbT+1P0THiKDkHzjEuRyXow9Ns2stGiFHXEL2hiTFIsIhFeuMUtkGgjTmm
+    nbaQrA5kIUak3y74TJ6FW2YvnqLVhJiqf8ogqEyRDiTuNTtpG98xcEzmcV4lsnsz
+    zshofbanOf52eMv1H4fKKGlRRPgVBDUGALJYUC0dHzO+3Hd70uX/LPzCP3fICE5N
+    7FVGZIOuaiK9C+kHeS/VOA9pqodu6ZDj2r0aVSQ3v0KDbFDPrlkho5U8UzYPVPmX
+    kBfCxJzjwNV7Hfw39BW3aob7
+    -----END CERTIFICATE-----",
+
+/** Certificado Privado */
+"webpay_cert" => "-----BEGIN CERTIFICATE-----
+MIIDizCCAnOgAwIBAgIJAIXzFTyfjyBkMA0GCSqGSIb3DQEBCwUAMFwxCzAJBgNV
+BAYTAkNMMQswCQYDVQQIDAJSTTERMA8GA1UEBwwIU2FudGlhZ28xEjAQBgNVBAoM
+CXRyYW5zYmFuazEMMAoGA1UECwwDUFJEMQswCQYDVQQDDAIxMDAeFw0xODAzMjkx
+NjA4MjhaFw0yMzAzMjgxNjA4MjhaMFwxCzAJBgNVBAYTAkNMMQswCQYDVQQIDAJS
+TTERMA8GA1UEBwwIU2FudGlhZ28xEjAQBgNVBAoMCXRyYW5zYmFuazEMMAoGA1UE
+CwwDUFJEMQswCQYDVQQDDAIxMDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBAKRqDk/pv8GeWnEaTVhfw55fThmqbFZOHEc/Un7oVWP+ExjD0kZ/aAwMJZ3d
+9hpbBExftjoyJ0AYKJXA2CyLGxRp30LapBa2lMehzdP6tC5nrCYbDFz8r8ZyN/ie
+4lBQ8GjfONq34cLQfM+tOxyazgDYRnZVD9tvOcqI5bFwFKqpn/yMr9Eya7gTo/OP
+wyz69sAF8MKr0YN941n6C1Cdrzp6cRftdj83nlI75Ue//rMYih/uQYiht4XWFjAA
+usoOG/IVVCCHhVQGE/Rp22dAF8JzWYZWCe+ICOKjEzEZPjDBqPoh9O+0eGTFVwn2
+qZf2iSLDKBOiha1wwzpTiiJV368CAwEAAaNQME4wHQYDVR0OBBYEFDfN1Tlj7wbn
+JIemBNO1XrUOikQpMB8GA1UdIwQYMBaAFDfN1Tlj7wbnJIemBNO1XrUOikQpMAwG
+A1UdEwQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBACzXPSHet7aZrQvMUN03jOqq
+w37brCWZ+L/+pbdOugVRAQRb2W+Z6gyrJ2BuUuiZLCXpjvXACSpwcSB3JesWs9KE
+YO8E8ofF7a6ORvi2Mw0vpBbwJLqnci1gVlAj3X8r/VbX2rGbvRy+BJAF769xr43X
+dtns0JIWwKud0xC3iRPMnewo/75HIblbN3guePfouoR2VgfBmeU72UR8O+OpjwbF
+vpidobGqTGvZtxRV5axer69WY0rAXRhTSfkvyGTXERCJ3vdsF/v9iNKHhERUnpV6
+KDrfvgD9uqWH12/89hfsfVN6iRH9UOE+SKoR/jHtvLMhVHpa80HVK1qdlfqUTZo=
+-----END CERTIFICATE-----",
+
+    /** Codigo Comercio */
+    "commerce_code" => "597033874146",
+
+);
