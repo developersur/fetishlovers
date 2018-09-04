@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<title>E-SHOP HTML Template</title>
+	<title>FetishLovers. Venta de juguetes eróticos, Concepción</title>
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Hind:400,700" rel="stylesheet">
@@ -170,15 +170,16 @@
 					<span class="menu-header">Menu <i class="fa fa-bars"></i></span>
 					<ul class="menu-list">
 						<li><a href="#">Inicio</a></li>
+						<li><a href="#">Nosotros</a></li>
 						<li><a href="#">Contactanos</a></li>
-						<li class="dropdown default-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Pages <i class="fa fa-caret-down"></i></a>
+						<!--<li class="dropdown default-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Pages <i class="fa fa-caret-down"></i></a>
 							<ul class="custom-menu">
 								<li><a href="index.html">Home</a></li>
 								<li><a href="products.html">Products</a></li>
 								<li><a href="product-page.html">Product Details</a></li>
 								<li><a href="checkout.html">Checkout</a></li>
 							</ul>
-						</li>
+						</li>-->
 					</ul>
 				</div>
 				<!-- menu nav -->
