@@ -24,16 +24,16 @@ function valida_rut(){
 
 <div class="container" id="login">
     <div class="row">
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-5 col-md-offset-5">
             <div class="panel panel-login">
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-xs-6">
                             <a href="#" class="active" id="login-form-link">Iniciar Sesión</a>
                         </div>
-                        <div class="col-xs-6">
+                        <!--<div class="col-xs-6">
                             <a href="#" id="register-form-link">Registrate</a>
-                        </div>
+                        </div>-->
                     </div>
                     <hr>
                 </div>
@@ -79,7 +79,7 @@ function valida_rut(){
                                 </div>
                             </form>
 
-                            <form id="register-form" action="<?php echo base_url(); ?>index.php/Usuario/registrarUsuario" method="post" role="form" style="display: none;">
+                            <!--<form id="register-form" action="<?php echo base_url(); ?>index.php/Usuario/registrarUsuario" method="post" role="form" style="display: none;">
                                 <div class="form-group">
                                     <input type="text" name="nombre_con" id="nombre_con" class="form-control" placeholder="Nombre completo *" class="form-control" minlength="5" required>
                                 </div>
@@ -110,7 +110,7 @@ function valida_rut(){
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+                            </form>-->
                         </div>
                     </div>
                 </div>
@@ -119,7 +119,7 @@ function valida_rut(){
     </div>
 </div>
 
-<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="ModalLabel">
+<!--<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="ModalLabel">
   <div class="modal-dialog modal-sm" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -139,4 +139,4 @@ function valida_rut(){
       </div>
     </div>
   </div>
-</div>
+</div>-->

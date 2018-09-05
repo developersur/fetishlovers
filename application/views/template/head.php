@@ -27,6 +27,9 @@
 
 	<!-- Custom stlylesheet -->
 	<link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css" />
+	
+	<!-- mis estilos -->
+	<link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>assets/css/login.css" />
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -84,7 +87,7 @@
 								<strong class="text-uppercase">Mi cuenta <i class="fa fa-caret-down"></i></strong>
 							</div>
 							<ul class="custom-menu">
-								<li><a href="#"><i class="fa fa-unlock-alt"></i>Login</a></li>
+								<li><a href="<?php echo base_url(); ?>index.php/Login"><i class="fa fa-unlock-alt"></i>Login</a></li>
 								<li><a href="#"><i class="fa fa-user-plus"></i>Crear cuenta</a></li>
 							</ul>
 						</li>

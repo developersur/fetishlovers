@@ -1,11 +1,11 @@
 <div class="container" id="login">
     <div class="row">
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-5 col-md-offset-5">
             <div class="panel panel-login">
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-xs-12">
-                            <a href="#" class="active" id="login-form-link">Iniciar Sesión Admin</a>
+                            <a href="#" class="active" id="login-form-link">Sesión de administrador</a>
                         </div>
                     </div>
                     <hr>

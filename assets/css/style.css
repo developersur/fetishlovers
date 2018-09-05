@@ -480,7 +480,7 @@ textarea.input {
 
 .category-nav {
   float: left;
-  width: 270px;
+  width: 250px;
 }
 
 .category-nav .category-header {
@@ -499,7 +499,7 @@ textarea.input {
 
 .category-nav .category-list {
   position: absolute;
-  width: 270px;
+  width: 250px;
   background-color: #FFF;
   border-left: 1px solid #DADADA;
   border-right: 1px solid #DADADA;
