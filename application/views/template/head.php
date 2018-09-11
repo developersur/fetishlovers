@@ -30,6 +30,7 @@
 	
 	<!-- mis estilos -->
 	<link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>assets/css/login.css" />
+	<link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>assets/css/contacto.css" />
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -62,7 +63,7 @@
 					<div class="header-logo">
 						<a class="logo" href="#">
 							<!--<img src="./img/logo.png" alt="">-->
-							<h1><label>FetishLovers</label></h1>
+							<h1><label><a href="<?php echo base_url(); ?>">FetishLovers</a></label></h1>
 						</a>
 					</div>
 					<!-- /Logo -->
@@ -160,9 +161,10 @@
 				<div class="category-nav">
 					<span class="category-header">Categorías <i class="fa fa-list"></i></span>
 					<ul class="category-list">
-						<li><a href="#">Categoría 1</a></li>
-						<li><a href="#">Categoría 2</a></li>
-						<li><a href="#">Categoría 3</a></li>
+						<li><a href="#">Accesorios</a></li>
+						<li><a href="#">Consoladores</a></li>
+						<li><a href="#">Lenceria</a></li>
+						<li><a href="#">Preservativos</a></li>
 						<li><a href="#">Ver todo</a></li>
 					</ul>
 				</div>
@@ -172,9 +174,9 @@
 				<div class="menu-nav">
 					<span class="menu-header">Menu <i class="fa fa-bars"></i></span>
 					<ul class="menu-list">
-						<li><a href="#">Inicio</a></li>
+						<li><a href="<?php echo base_url(); ?>">Inicio</a></li>
 						<li><a href="#">Nosotros</a></li>
-						<li><a href="#">Contactanos</a></li>
+						<li><a href="<?php echo base_url(); ?>index.php/Contacto">Contactanos</a></li>
 						<!--<li class="dropdown default-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Pages <i class="fa fa-caret-down"></i></a>
 							<ul class="custom-menu">
 								<li><a href="index.html">Home</a></li>

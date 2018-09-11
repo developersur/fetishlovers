@@ -41,13 +41,13 @@ class Contacto extends CI_Controller
       $config['protocol'] = 'smtp';
 
      //El servidor de correo que utilizaremos
-      $config["smtp_host"] = 'ssl://mail.redelect.cl';
+      $config["smtp_host"] = 'ssl://mail.fetishlovers.cl';
 
      //Nuestro usuario
-      $config["smtp_user"] = 'notificador@redelect.cl';
+      $config["smtp_user"] = 'notificador@fetishlovers.cl';
 
      //Nuestra contraseña
-      $config["smtp_pass"] = 'notificador';
+      $config["smtp_pass"] = 'notifetishlo';
 
      //El puerto que utilizará el servidor smtp
       $config["smtp_port"] = '465';
@@ -68,14 +68,14 @@ class Contacto extends CI_Controller
       $this->email->initialize($config);
 
     //Ponemos la dirección de correo que enviará el email y un nombre
-      $this->email->from('notificador@redelect.cl', 'Notificador Redelect');
+      $this->email->from('notificador@fetishlovers.cl', 'Notificador Fetishlovers');
 
     /*
      * Ponemos el o los destinatarios para los que va el email
      * en este caso al ser un formulario de contacto te lo enviarás a ti
      * mismo
      */
-      $this->email->to('whernandez@redelect.cl', 'Walter Hernandez');
+      $this->email->to('contacto@fetishlovers.cl', 'Usuario');
 
     //Definimos el asunto del mensaje
       $this->email->subject('Consulta');

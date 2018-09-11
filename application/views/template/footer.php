@@ -34,9 +34,11 @@
 					<div class="footer">
 						<h3 class="footer-header">Categorias</h3>
 						<ul class="list-links">
-							<li><a href="#">Categoria 1</a></li>
-							<li><a href="#">Categoria 2</a></li>
-							<li><a href="#">Categoria 3</a></li>
+						<li><a href="#">Accesorios</a></li>
+						<li><a href="#">Consoladores</a></li>
+						<li><a href="#">Lenceria</a></li>
+						<li><a href="#">Preservativos</a></li>
+						<li><a href="#">Ver todo</a></li>
 						</ul>
 					</div>
 				</div>
