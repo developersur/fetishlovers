@@ -8,31 +8,31 @@
 				<div id="home-slick">
 					<!-- banner -->
 					<div class="banner banner-1">
-						<img src="<?php echo base_url(); ?>assets/img/banner01.jpg" alt="">
+						<img src="<?php echo base_url(); ?>assets/img/productos/sensor-plus-tres-sabores.jpg" height="500" alt="">
 						<div class="banner-caption text-center">
-							<h1>Bags sale</h1>
+							<!--<h1>Bags sale</h1>
 							<h3 class="white-color font-weak">Up to 50% Discount</h3>
-							<button class="primary-btn">Shop Now</button>
+							<button class="primary-btn">Shop Now</button>-->
 						</div>
 					</div>
 					<!-- /banner -->
 
 					<!-- banner -->
 					<div class="banner banner-1">
-						<img src="<?php echo base_url(); ?>assets/img/banner02.jpg" alt="">
+						<img src="<?php echo base_url(); ?>assets/img/productos/set-orgasmic-ball-.jpg" height="500" alt="">
 						<div class="banner-caption">
-							<h1 class="primary-color">HOT DEAL<br><span class="white-color font-weak">Up to 50% OFF</span></h1>
-							<button class="primary-btn">Shop Now</button>
+							<!--<h1 class="primary-color">HOT DEAL<br><span class="white-color font-weak">Up to 50% OFF</span></h1>
+							<button class="primary-btn">Shop Now</button>-->
 						</div>
 					</div>
 					<!-- /banner -->
 
 					<!-- banner -->
 					<div class="banner banner-1">
-						<img src="<?php echo base_url(); ?>assets/img/banner03.jpg" alt="">
+						<img src="<?php echo base_url(); ?>assets/img/productos/funda-double-trouble-extension.jpg" height="500" alt="">
 						<div class="banner-caption">
-							<h1 class="white-color">New Product <span>Collection</span></h1>
-							<button class="primary-btn">Shop Now</button>
+							<!--<h1 class="white-color">New Product <span>Collection</span></h1>
+							<button class="primary-btn">Shop Now</button>-->
 						</div>
 					</div>
 					<!-- /banner -->
@@ -54,7 +54,7 @@
 				<!-- section-title -->
 				<div class="col-md-12">
 					<div class="section-title">
-						<h2 class="title">Deals Of The Day</h2>
+						<h2 class="title">Ofertas del día</h2>
 						<div class="pull-right">
 							<div class="product-slick-dots-1 custom-dots"></div>
 						</div>
@@ -63,16 +63,49 @@
 				<!-- /section-title -->
 
 				<!-- banner -->
-				<div class="col-md-3 col-sm-6 col-xs-6">
+				<!--<div class="col-md-3 col-sm-6 col-xs-6">
 					<div class="banner banner-2">
-						<img src="<?php echo base_url(); ?>assets/img/banner14.jpg" alt="">
+						<img src="<?php echo base_url(); ?>assets/img/productos/arnes-multifuncion-ultra (1).jpg" alt="">
 						<div class="banner-caption">
-							<h2 class="white-color">NEW<br>COLLECTION</h2>
-							<button class="primary-btn">Shop Now</button>
+							<h2 class="white-color">NUEVA<br>COLECCIÓN</h2>
+							<button class="primary-btn">COMPRAR AHORA</button>
+						</div>
+					</div>
+				</div>-->
+				<!-- /banner -->
+
+				<div class="col-md-3 col-sm-6 col-xs-6">
+					<div class="product product-single product-hot">
+						<div class="product-thumb">
+							<div class="product-label">
+								<span class="sale">-20%</span>
+							</div>
+							<ul class="product-countdown">
+								<li><span>00 H</span></li>
+								<li><span>00 M</span></li>
+								<li><span>00 S</span></li>
+							</ul>
+							<button class="main-btn quick-view"><i class="fa fa-search-plus"></i>Ver más</button>
+							<img src="<?php echo base_url(); ?>assets/img/productos/plug-special-anal-stimulation- (6).jpg" alt="">
+						</div>
+						<div class="product-body">
+							<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
+							<div class="product-rating">
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star"></i>
+								<i class="fa fa-star-o empty"></i>
+							</div>
+							<h2 class="product-name"><a href="#">Nombre del producto</a></h2>
+							<div class="product-btns">
+								<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
+								<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
+								<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al carro</button>
+							</div>
 						</div>
 					</div>
 				</div>
-				<!-- /banner -->
 
 				<!-- Product Slick -->
 				<div class="col-md-9 col-sm-6 col-xs-6">
@@ -82,7 +115,7 @@
 							<div class="product product-single">
 								<div class="product-thumb">
 									<div class="product-label">
-										<span>New</span>
+										<span>Nuevo</span>
 										<span class="sale">-20%</span>
 									</div>
 									<ul class="product-countdown">
@@ -90,8 +123,8 @@
 										<li><span>00 M</span></li>
 										<li><span>00 S</span></li>
 									</ul>
-									<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
-									<img src="<?php echo base_url(); ?>assets/img/product01.jpg" alt="">
+									<button class="main-btn quick-view"><i class="fa fa-search-plus"></i>Ver más</button>
+									<img src="<?php echo base_url(); ?>assets/img/productos/arnes-multifuncion-ultra (1).jpg" alt="">
 								</div>
 								<div class="product-body">
 									<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
@@ -102,11 +135,11 @@
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star-o empty"></i>
 									</div>
-									<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
+									<h2 class="product-name"><a href="#">Nompre del producto</a></h2>
 									<div class="product-btns">
 										<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
 										<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-										<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+										<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al carro</button>
 									</div>
 								</div>
 							</div>
@@ -123,8 +156,8 @@
 										<li><span>00 M</span></li>
 										<li><span>00 S</span></li>
 									</ul>
-									<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
-									<img src="<?php echo base_url(); ?>assets/img/product07.jpg" alt="">
+									<button class="main-btn quick-view"><i class="fa fa-search-plus"></i>Ver mas</button>
+									<img src="<?php echo base_url(); ?>assets/img/productos/consolador-sex-pop-bananin.jpg" alt="">
 								</div>
 								<div class="product-body">
 									<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
@@ -135,11 +168,45 @@
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star-o empty"></i>
 									</div>
-									<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
+									<h2 class="product-name"><a href="#">Nombre del producto</a></h2>
 									<div class="product-btns">
 										<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
 										<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-										<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+										<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al carro</button>
+									</div>
+								</div>
+							</div>
+							<!-- /Product Single -->
+
+							<!-- Product Single -->
+							<div class="product product-single">
+								<div class="product-thumb">
+									<div class="product-label">
+										<span>Nuevo</span>
+										<span class="sale">-20%</span>
+									</div>
+									<ul class="product-countdown">
+										<li><span>00 H</span></li>
+										<li><span>00 M</span></li>
+										<li><span>00 S</span></li>
+									</ul>
+									<button class="main-btn quick-view"><i class="fa fa-search-plus"></i>Ver más</button>
+									<img src="<?php echo base_url(); ?>assets/img/productos/funda-double-trouble-extension (3).jpg" alt="">
+								</div>
+								<div class="product-body">
+									<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
+									<div class="product-rating">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star-o empty"></i>
+									</div>
+									<h2 class="product-name"><a href="#">Nombre del producto</a></h2>
+									<div class="product-btns">
+										<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
+										<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
+										<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al carro</button>
 									</div>
 								</div>
 							</div>
@@ -157,8 +224,8 @@
 										<li><span>00 M</span></li>
 										<li><span>00 S</span></li>
 									</ul>
-									<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
-									<img src="<?php echo base_url(); ?>assets/img/product06.jpg" alt="">
+									<button class="main-btn quick-view"><i class="fa fa-search-plus"></i>Ver más</button>
+									<img src="<?php echo base_url(); ?>assets/img/productos/vagina-masturbadora-la-gran-amante.jpg" alt="">
 								</div>
 								<div class="product-body">
 									<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
@@ -169,45 +236,11 @@
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star-o empty"></i>
 									</div>
-									<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
+									<h2 class="product-name"><a href="#">Nombre del producto</a></h2>
 									<div class="product-btns">
 										<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
 										<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-										<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
-									</div>
-								</div>
-							</div>
-							<!-- /Product Single -->
-
-							<!-- Product Single -->
-							<div class="product product-single">
-								<div class="product-thumb">
-									<div class="product-label">
-										<span>New</span>
-										<span class="sale">-20%</span>
-									</div>
-									<ul class="product-countdown">
-										<li><span>00 H</span></li>
-										<li><span>00 M</span></li>
-										<li><span>00 S</span></li>
-									</ul>
-									<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
-									<img src="<?php echo base_url(); ?>assets/img/product08.jpg" alt="">
-								</div>
-								<div class="product-body">
-									<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
-									<div class="product-rating">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-o empty"></i>
-									</div>
-									<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-									<div class="product-btns">
-										<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
-										<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-										<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+										<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al carro</button>
 									</div>
 								</div>
 							</div>
@@ -224,7 +257,7 @@
 				<!-- section title -->
 				<div class="col-md-12">
 					<div class="section-title">
-						<h2 class="title">Deals Of The Day</h2>
+						<h2 class="title">Sólo por hoy</h2>
 						<div class="pull-right">
 							<div class="product-slick-dots-2 custom-dots">
 							</div>
@@ -245,8 +278,8 @@
 								<li><span>00 M</span></li>
 								<li><span>00 S</span></li>
 							</ul>
-							<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
-							<img src="<?php echo base_url(); ?>assets/img/product01.jpg" alt="">
+							<button class="main-btn quick-view"><i class="fa fa-search-plus"></i>Ver más</button>
+							<img src="<?php echo base_url(); ?>assets/img/productos/sensor-plus-long-love-retardantes(1).jpg" alt="">
 						</div>
 						<div class="product-body">
 							<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
@@ -257,11 +290,11 @@
 								<i class="fa fa-star"></i>
 								<i class="fa fa-star-o empty"></i>
 							</div>
-							<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
+							<h2 class="product-name"><a href="#">Nombre del producto</a></h2>
 							<div class="product-btns">
 								<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
 								<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-								<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+								<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al carro</button>
 							</div>
 						</div>
 					</div>
@@ -275,8 +308,61 @@
 							<!-- Product Single -->
 							<div class="product product-single">
 								<div class="product-thumb">
-									<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
-									<img src="<?php echo base_url(); ?>assets/img/product06.jpg" alt="">
+									<button class="main-btn quick-view"><i class="fa fa-search-plus"></i>Ver más</button>
+									<img src="<?php echo base_url(); ?>assets/img/productos/vibrador-vertigo-.jpg" alt="">
+								</div>
+								<div class="product-body">
+									<h3 class="product-price">$32.50</h3>
+									<div class="product-rating">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star-o empty"></i>
+									</div>
+									<h2 class="product-name"><a href="#">Nombre del producto</a></h2>
+									<div class="product-btns">
+										<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
+										<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
+										<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al carro</button>
+									</div>
+								</div>
+							</div>
+							<!-- /Product Single -->
+
+							<!-- Product Single -->
+							<div class="product product-single">
+								<div class="product-thumb">
+									<div class="product-label">
+										<span class="sale">-20%</span>
+									</div>
+									<button class="main-btn quick-view"><i class="fa fa-search-plus"></i>Ver más</button>
+									<img src="<?php echo base_url(); ?>assets/img/productos/vibrador-vertigo-(6).jpg" alt="">
+								</div>
+								<div class="product-body">
+									<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
+									<div class="product-rating">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star-o empty"></i>
+									</div>
+									<h2 class="product-name"><a href="#">Nombre</a></h2>
+									<div class="product-btns">
+										<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
+										<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
+										<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al carro</button>
+									</div>
+								</div>
+							</div>
+							<!-- /Product Single -->
+
+							<!-- Product Single -->
+							<div class="product product-single">
+								<div class="product-thumb">
+									<button class="main-btn quick-view"><i class="fa fa-search-plus"></i>Ver más</button>
+									<img src="<?php echo base_url(); ?>assets/img/productos/vibrador-gene-.jpg" alt="">
 								</div>
 								<div class="product-body">
 									<h3 class="product-price">$32.50</h3>
@@ -291,7 +377,7 @@
 									<div class="product-btns">
 										<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
 										<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-										<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+										<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al carro</button>
 									</div>
 								</div>
 							</div>
@@ -301,10 +387,11 @@
 							<div class="product product-single">
 								<div class="product-thumb">
 									<div class="product-label">
+										<span>Nuevo</span>
 										<span class="sale">-20%</span>
 									</div>
-									<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
-									<img src="<?php echo base_url(); ?>assets/img/product05.jpg" alt="">
+									<button class="main-btn quick-view"><i class="fa fa-search-plus"></i>Ver más</button>
+									<img src="<?php echo base_url(); ?>assets/img/productos/sensor-plus-long-love-retardantes(1).jpg" alt="">
 								</div>
 								<div class="product-body">
 									<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
@@ -319,61 +406,7 @@
 									<div class="product-btns">
 										<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
 										<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-										<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
-									</div>
-								</div>
-							</div>
-							<!-- /Product Single -->
-
-							<!-- Product Single -->
-							<div class="product product-single">
-								<div class="product-thumb">
-									<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
-									<img src="<?php echo base_url(); ?>assets/img/product04.jpg" alt="">
-								</div>
-								<div class="product-body">
-									<h3 class="product-price">$32.50</h3>
-									<div class="product-rating">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-o empty"></i>
-									</div>
-									<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-									<div class="product-btns">
-										<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
-										<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-										<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
-									</div>
-								</div>
-							</div>
-							<!-- /Product Single -->
-
-							<!-- Product Single -->
-							<div class="product product-single">
-								<div class="product-thumb">
-									<div class="product-label">
-										<span>New</span>
-										<span class="sale">-20%</span>
-									</div>
-									<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Quick view</button>
-									<img src="<?php echo base_url(); ?>assets/img/product03.jpg" alt="">
-								</div>
-								<div class="product-body">
-									<h3 class="product-price">$32.50 <del class="product-old-price">$45.00</del></h3>
-									<div class="product-rating">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star-o empty"></i>
-									</div>
-									<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-									<div class="product-btns">
-										<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
-										<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-										<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+										<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al carro</button>
 									</div>
 								</div>
 							</div>

@@ -26,7 +26,7 @@
     transition: all 0.1s linear;
     }
     .panel-login>.panel-heading a.active{
-    color: #F8694A;
+    color: #FC01DA;
     font-size: 18px;
     }
     .panel-login>.panel-heading hr{
@@ -57,7 +57,7 @@
     border-color: #ccc;
     }
     .btn-login {
-    background-color: #F8694A;
+    background-color: #FC01DA;
     outline: none;
     color: #fff;
     font-size: 14px;
@@ -65,7 +65,7 @@
     font-weight: normal;
     padding: 14px 0;
     text-transform: uppercase;
-    border-color: #F8694A;
+    border-color: #FC01DA;
     border-radius:  0% !important   ;
     -webkit-border-radius:  0% !important   ;
     -moz-border-radius:  0% !important   ;

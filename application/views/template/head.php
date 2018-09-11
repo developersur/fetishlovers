@@ -109,7 +109,7 @@
 									<div class="shopping-cart-list">
 										<div class="product product-widget">
 											<div class="product-thumb">
-												<img src="<?php echo base_url(); ?>assets/img/thumb-product01.jpg" alt="">
+												<img src="<?php echo base_url(); ?>assets/img/productos/anillo-vibrador-chester.jpg" alt="">
 											</div>
 											<div class="product-body">
 												<h3 class="product-price">$32.50 <span class="qty">x3</span></h3>
@@ -119,7 +119,7 @@
 										</div>
 										<div class="product product-widget">
 											<div class="product-thumb">
-												<img src="<?php echo base_url(); ?>assets/img/thumb-product01.jpg" alt="">
+												<img src="<?php echo base_url(); ?>assets/img/productos/sensor-plus-tres-sabores.jpg" alt="">
 											</div>
 											<div class="product-body">
 												<h3 class="product-price">$32.50 <span class="qty">x3</span></h3>
