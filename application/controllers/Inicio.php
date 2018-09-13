@@ -6,6 +6,13 @@ class Inicio extends CI_Controller
 	function __construct()
 	{
 		parent::__construct();
+
+		// carga categorias
+		$this->load->model('CategoriaModel');
+		// Carga productos
+		$this->load->model('ProductoModel');
+		// carga los datos
+		$this->load->model('DatosModel');
 	}
 
 	public function index()

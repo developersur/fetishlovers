@@ -1,6 +1,47 @@
-<div class="panel-group" id="accordion">
+<div class="col-md-9 col-md-offset-3">
+    <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Compras
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                <li><a href="#">Listado de compras</a></li>
+                <li><a href="#">Costos de envío</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Productos
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                <li><a href="#">Listar</a></li>
+                <li><a href="#">Agregar</a></li>
+                <li><a href="#">Modificar</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categorías
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                <li><a href="#">Listar</a></li>
+                <li><a href="#">Agregar</a></li>
+                <li><a href="#">Modificar</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Otros
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Mis datos</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </nav>
+</div> 
+<!--<div class="panel-group" id="accordion">
 
-                <!-- Compras -->
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
@@ -31,7 +72,6 @@
                     </div>
                 </div>
 
-                <!-- Productos -->
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
@@ -63,7 +103,6 @@
                 </div>
 
 
-                <!-- Categorias -->
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
@@ -94,7 +133,6 @@
                     </div>
                 </div>
 
-                <!-- Servicios -->
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
@@ -135,11 +173,11 @@
                     <div id="collapseSix" class="panel-collapse collapse">
                         <div class="panel-body">
                             <table class="table">
-                                <!--<tr>
+                                <tr>
                                     <td>
                                         <span class=""></span><a href="">Ventas</a>
                                     </td>
-                                </tr>-->
+                                </tr>
                                 <tr>
                                     <td>
                                         <span class=""></span><a href="<?php echo base_url(); ?>index.php/QuienesSomos/viewQuienesSomos">Quienes somos</a>
@@ -155,3 +193,4 @@
                     </div>
                 </div>
             </div>
+-->

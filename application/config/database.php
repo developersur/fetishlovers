@@ -146,13 +146,12 @@ $db['default'] = array(
 );*/
 
 /*BD produccion*/
-
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'redelect.cl',
-	'username' => 'redelect_web',
-	'password' => 'redelect2018*',
-	'database' => 'redelect_web',
+	'hostname' => 'fetishlovers.cl',
+	'username' => 'fetishlo_web',
+	'password' => 'fetishlo2018*',
+	'database' => 'fetishlo_web',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -168,4 +167,3 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
-

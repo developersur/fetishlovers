@@ -34,11 +34,20 @@
 					<div class="footer">
 						<h3 class="footer-header">Categorias</h3>
 						<ul class="list-links">
-						<li><a href="#">Accesorios</a></li>
-						<li><a href="#">Consoladores</a></li>
-						<li><a href="#">Lenceria</a></li>
-						<li><a href="#">Preservativos</a></li>
-						<li><a href="#">Ver todo</a></li>
+						<?php
+							//$this->load->model('CategoriaModel');
+							$categorias = $this->CategoriaModel->obtenerCategoriasActivas();
+
+							if($categorias)
+							{
+									foreach ($categorias->result() as $categoria)
+									{
+										?>
+										<li><a href="<?php echo base_url(); ?>index.php/Producto/Categoria?id_categoria=<?php echo $categoria->id; ?>"><?php echo $categoria->nombre; ?></a></li>
+									<?php
+								}
+							}
+						?>
 						</ul>
 					</div>
 				</div>

@@ -1,4 +1,4 @@
-<div class="panel-group" id="accordion">
+<div class="panel-group" id="">
                 
                 <!-- Compras -->
                 <div class="panel panel-default">
