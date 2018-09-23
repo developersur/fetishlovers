@@ -60,6 +60,12 @@ Table OF Contents
 	Typography
 \*----------------------------*/
 
+/*head*/
+#span_correo{
+  margin-left: 1%;
+}
+/*****/
+
 body {
   font-family: 'Hind', sans-serif;
   color: #4A4E5A;

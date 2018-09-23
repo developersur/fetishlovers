@@ -30,13 +30,8 @@
 	
 	<!-- mis estilos -->
 	<link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>assets/css/login.css" />
-
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
+	<link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>assets/css/contacto.css" />
+	<link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>assets/css/menuadmin.css" />
 
 </head>
 
@@ -47,8 +42,13 @@
 		<div id="top-header">
 			<div class="container">
 				<div class="pull-left">
-					<span><i class="fa fa-mobile"></i>+569 12345678</span>
-					<span><i class="fa fa-envelope"></i>contacto@fetishlovers.cl</span>
+					<?php
+					$datos = $this->DatosModel->obtenerDatos();
+					foreach($datos->result() as $dato)
+					{
+						echo '<font><i class="fa fa-mobile"></i>'.$dato->telefono.'</font>';
+						echo '<font><i class="fa fa-envelope"></i>'.$dato->correo.'</font>';
+					} ?>
 				</div>
 			</div>
 		</div>
@@ -62,7 +62,7 @@
 					<div class="header-logo">
 						<a class="logo" href="#">
 							<!--<img src="./img/logo.png" alt="">-->
-							<h1><label>FetishLovers</label></h1>
+							<h1><label><a href="<?php echo base_url(); ?>">FetishLovers</a></label></h1>
 						</a>
 					</div>
 					<!-- /Logo -->
@@ -87,8 +87,21 @@
 								<strong class="text-uppercase">Mi cuenta <i class="fa fa-caret-down"></i></strong>
 							</div>
 							<ul class="custom-menu">
-								<li><a href="<?php echo base_url(); ?>index.php/Login"><i class="fa fa-unlock-alt"></i>Login</a></li>
-								<li><a href="#"><i class="fa fa-user-plus"></i>Crear cuenta</a></li>
+							<?php
+								if($this->session->logged_in)
+								{
+								?>
+									<li class="block"><a href="<?php echo base_url(); ?>index.php/Admin">Administrar</a></li>
+									<li class="block"><a href="<?php echo base_url(); ?>index.php/Login/salir">Salir</a></li>
+									<?php
+								}else if($this->session->logged_in_user){?>
+									<li class="block"><a href="<?php echo base_url(); ?>index.php/Cliente/">Mi Cuenta</a></li>
+									<li class="block"><a href="<?php echo base_url(); ?>index.php/Login/salir">Salir</a></li>
+								<?php
+								}else{?>
+									<li><a href="<?php echo base_url(); ?>index.php/Login"><i class="fa fa-unlock-alt"></i>Login</a></li>
+									<li><a href="#"><i class="fa fa-user-plus"></i>Crear cuenta</a></li>
+								<?php } ?>
 							</ul>
 						</li>
 						<!-- /Account -->
@@ -160,10 +173,13 @@
 				<div class="category-nav">
 					<span class="category-header">Categorías <i class="fa fa-list"></i></span>
 					<ul class="category-list">
-						<li><a href="#">Categoría 1</a></li>
-						<li><a href="#">Categoría 2</a></li>
-						<li><a href="#">Categoría 3</a></li>
-						<li><a href="#">Ver todo</a></li>
+					<?php
+						//$this->load->model('CategoriaModel');
+						$categorias = $this->CategoriaModel->obtenerCategoriasActivas();
+						foreach($categorias->result() as $categoria) { ?>
+							<li><a href="<?php echo base_url(); ?>index.php/Producto/Categoria?id_categoria=<?php echo $categoria->id; ?>"><?php echo $categoria->nombre; ?></a></li>
+						<?php } 
+					?>
 					</ul>
 				</div>
 				<!-- /category nav -->
@@ -172,17 +188,9 @@
 				<div class="menu-nav">
 					<span class="menu-header">Menu <i class="fa fa-bars"></i></span>
 					<ul class="menu-list">
-						<li><a href="#">Inicio</a></li>
+						<li><a href="<?php echo base_url(); ?>">Inicio</a></li>
 						<li><a href="#">Nosotros</a></li>
-						<li><a href="#">Contactanos</a></li>
-						<!--<li class="dropdown default-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Pages <i class="fa fa-caret-down"></i></a>
-							<ul class="custom-menu">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="products.html">Products</a></li>
-								<li><a href="product-page.html">Product Details</a></li>
-								<li><a href="checkout.html">Checkout</a></li>
-							</ul>
-						</li>-->
+						<li><a href="<?php echo base_url(); ?>index.php/Contacto">Contactanos</a></li>
 					</ul>
 				</div>
 				<!-- menu nav -->

@@ -146,12 +146,19 @@ $db['default'] = array(
 );*/
 
 /*BD produccion*/
+<<<<<<< HEAD
 
+=======
+>>>>>>> f4e864f631d5e1c19f37bea2bf361e08eb5035d4
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'fetishlovers.cl',
 	'username' => 'fetishlo_web',
+<<<<<<< HEAD
 	'password' => 'fetishlovers',
+=======
+	'password' => 'fetishlo2018*',
+>>>>>>> f4e864f631d5e1c19f37bea2bf361e08eb5035d4
 	'database' => 'fetishlo_web',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
@@ -168,4 +175,7 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+<<<<<<< HEAD
 
+=======
+>>>>>>> f4e864f631d5e1c19f37bea2bf361e08eb5035d4

@@ -1,0 +1,21 @@
+#form-contacto{
+    margin-top: 2%;
+}
+
+.panel{
+    border-radius: 0% !important;
+    -webkit-border-radius: 0% !important;
+    -moz-border-radius: 0% !important;
+    -ms-border-radius: 0% !important;
+    -o-border-radius: 0% !important;
+}
+
+#btn_enviar{
+    background-color: #FC01DA !important;
+    border: 0px !important;
+    border-radius: 0% !important;
+    -webkit-border-radius: 0% !important;
+    -moz-border-radius: 0% !important;
+    -ms-border-radius: 0% !important;
+    -o-border-radius: 0% !important;
+}
