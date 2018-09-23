@@ -14,9 +14,9 @@
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Productos
                 <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                <li><a href="#">Listar</a></li>
-                <li><a href="#">Agregar</a></li>
-                <li><a href="#">Modificar</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/Producto/viewProductos">Listar</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/Producto/formProducto">Agregar</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/Producto/modProducto">Modificar</a></li>
                 </ul>
             </li>
             <li class="dropdown">
@@ -39,7 +39,7 @@
         </ul>
     </div>
     </nav>
-</div> 
+</div>
 <!--<div class="panel-group" id="accordion">
 
                 <div class="panel panel-default">

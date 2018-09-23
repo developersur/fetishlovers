@@ -122,43 +122,11 @@ $db['default'] = array(
 );*/
 
 //BD Luis Matamala
-
-/*$db['default'] = array(
+$db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
-	'database' => 'redelect_web',
-	'dbdriver' => 'mysqli',
-	'dbprefix' => '',
-	'pconnect' => FALSE,
-	'db_debug' => (ENVIRONMENT !== 'production'),
-	'cache_on' => FALSE,
-	'cachedir' => '',
-	'char_set' => 'utf8',
-	'dbcollat' => 'utf8_general_ci',
-	'swap_pre' => '',
-	'encrypt' => FALSE,
-	'compress' => FALSE,
-	'stricton' => FALSE,
-	'failover' => array(),
-	'save_queries' => TRUE
-);*/
-
-/*BD produccion*/
-<<<<<<< HEAD
-
-=======
->>>>>>> f4e864f631d5e1c19f37bea2bf361e08eb5035d4
-$db['default'] = array(
-	'dsn'	=> '',
-	'hostname' => 'fetishlovers.cl',
-	'username' => 'fetishlo_web',
-<<<<<<< HEAD
-	'password' => 'fetishlovers',
-=======
-	'password' => 'fetishlo2018*',
->>>>>>> f4e864f631d5e1c19f37bea2bf361e08eb5035d4
 	'database' => 'fetishlo_web',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
@@ -175,7 +143,26 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
-<<<<<<< HEAD
 
-=======
->>>>>>> f4e864f631d5e1c19f37bea2bf361e08eb5035d4
+/*BD produccion*/
+/*$db['default'] = array(
+	'dsn'	=> '',
+	'hostname' => 'fetishlovers.cl',
+	'username' => 'fetishlo_web',
+	'password' => 'fetishlo2018*',
+	'database' => 'fetishlo_web',
+	'dbdriver' => 'mysqli',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => (ENVIRONMENT !== 'production'),
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);*/

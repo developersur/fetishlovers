@@ -9,7 +9,7 @@ class Producto extends CI_Controller
 		parent::__construct();
 		$this->load->model('ProductoModel');
 		$this->load->model('CategoriaModel');
-		$this->load->model('ServicioModel');
+		//$this->load->model('ServicioModel');
 		// carga los datos
 		$this->load->model('DatosModel');
 	}
@@ -56,7 +56,78 @@ class Producto extends CI_Controller
 
 	public function agregarProducto()
 	{
-		$config['upload_path'] = '././assets/img/productos';
+		$data = array();
+		if(!empty($_FILES['imagen']['name']))
+		{
+					 $filesCount = count($_FILES['imagen']['name']);
+					 for($i = 0; $i < $filesCount; $i++)
+					 {
+							 $_FILES['image']['name'] = $_FILES['imagen']['name'][$i];
+							 $_FILES['image']['type'] = $_FILES['imagen']['type'][$i];
+							 $_FILES['image']['tmp_name'] = $_FILES['imagen']['tmp_name'][$i];
+							 $_FILES['image']['error'] = $_FILES['imagen']['error'][$i];
+							 $_FILES['image']['size'] = $_FILES['imagen']['size'][$i];
+
+							 $uploadPath = '././assets/img/productos';
+							 $config['upload_path'] = $uploadPath;
+							 $config['allowed_types'] = 'gif|jpg|png|jpeg';
+
+							 $this->load->library('upload', $config);
+							 $this->upload->initialize($config);
+							 if($this->upload->do_upload('image'))
+							 {
+									 $fileData = $this->upload->data();
+									 $uploadData[$i]['file_name'] = $fileData['file_name'];
+									 $uploadData[$i]['created'] = date("Y-m-d H:i:s");
+									 $uploadData[$i]['modified'] = date("Y-m-d H:i:s");
+							 }
+
+							 if(empty($uploadData))
+							 {
+								 $error = array('error' => $this->upload->display_errors());
+
+				 				 $this->load->view('/template/head');
+				 			 	 $this->load->view('Productos/AgregarProducto',$error);
+				 				 $this->load->view('/template/footer');
+							 }else {
+								 $base = 'https://www.redelect.cl/';
+
+								 $data_img = array(
+				 					'id_producto' => $this->input->post('codigo'),
+				 					'url' => $base.'assets/img/productos/'.$uploadData[$i]['file_name']
+				 				 );
+
+								 $this->ProductoModel->crearImagen($data_img);
+
+				 				 $exito = array('exito' => 'Producto creado con éxito');
+
+				 				 $this->load->view('/template/head');
+				 				 $this->load->view('Productos/AgregarProducto',$exito);
+				 				 $this->load->view('/template/footer');
+							 }
+			     }
+
+					 if(!empty($uploadData))
+					 {
+						 $data_prod = array(
+							'codigo' => $this->input->post('codigo'),
+							'nombre' => $this->input->post('nombre'),
+							'descripcion' => $this->input->post('descripcion'),
+							'precio' => $this->input->post('precio'),
+							'descuento' => $this->input->post('descuento'),
+							'marca'=> $this->input->post('marca'),
+							'cantidad' => $this->input->post('cantidad'),
+							'habilitado' => $this->input->post('habilitado'),
+							'nuevo' => $this->input->post('nuevo'),
+							'categoria' => $this->input->post('categoria')
+							//'imagen' => $base.'assets/img/productos/'.$file_name
+						 );
+
+						 $this->ProductoModel->crearProducto($data_prod);
+					 }
+		}
+
+		/*$config['upload_path'] = '././assets/img/productos';
 		$config['allowed_types'] = 'gif|jpg|png|jpeg';
 		$config['max_size'] = 1000;
 		$config['max_width'] = 5418;
@@ -101,7 +172,7 @@ class Producto extends CI_Controller
 				$this->load->view('/template/head');
 				$this->load->view('Productos/AgregarProducto',$exito);
 				$this->load->view('/template/footer');
-		}
+		}*/
 	}
 
 
@@ -119,14 +190,14 @@ class Producto extends CI_Controller
 		$this->load->view('Productos/PorCategoria',$data);
 		$this->load->view('/template/footer',$data);
 	}
-	
+
 	public function updateHabilitado()
 	{
 		$data = array(
 			'codigo' => $this->input->post('codigo'),
 			'estado' => $this->input->post('estado')
 		);
-		
+
 		echo $this->ProductoModel->updHabilitado($data);
 	}
 
@@ -145,7 +216,7 @@ class Producto extends CI_Controller
 			$data = array(
 				'texto' => htmlspecialchars($this->input->post('texto_buscar')),
 			);
-			
+
 			$datos['productos'] = $this->ProductoModel->buscaProductos($data);
 
 			$this->load->view('/template/head');
@@ -161,7 +232,7 @@ class Producto extends CI_Controller
 				'precio' => $this->input->post('precio'),
 				'id' => $this->input->post('id')
 			);
-			
+
 			$res = $this->ProductoModel->editProducto($data);
 
 			if($res){

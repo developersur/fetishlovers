@@ -49,8 +49,21 @@ class ProductoModel extends CI_Model {
                             'cantidad' => $data['cantidad'],
                             'habilitado' => $data['habilitado'],
                             'nuevo' => $data['nuevo'],
-                            'categoria' => $data['categoria'],
-                            'imagen' => $data['imagen']));
+                            'categoria' => $data['categoria']));
+  			return true;
+  		}
+    }
+
+    public function crearImagen($data)
+    {
+      $query = $this->db->get_where('imagenes', array('url' => $data['url']));
+
+  		if($query->num_rows() > 0)
+  		{
+  			return false;
+  		}else{
+  			$this->db->insert('imagenes', array('id_producto' => $data['id_producto'],
+                           'url' => $data['url']));
   			return true;
   		}
     }

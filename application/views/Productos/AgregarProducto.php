@@ -1,14 +1,14 @@
 <div class="container" id="menuadmin">
     <div class="row">
-        <div class="col-sm-3 col-md-3">
+        <div class="">
             <?php $this->load->view('template/MenuAdmin'); ?>
         </div>
-        <div class="col-sm-9 col-md-9">
+        <div class="col-sm-9 col-md-9 col-md-offset-3">
           <fieldset>
           <legend class="text-center header">Agregar producto</legend>
               <div class="panel panel-default">
                   <div class="panel-body">
-                        <?php 
+                        <?php
                         if(isset($error))
                         {
                             echo '<div class="alert alert-danger" role="alert">'.$error.'</div>';
@@ -16,7 +16,7 @@
                         if(isset($exito))
                         {
                             echo '<div class="alert alert-success" role="alert">'.$exito.'</div>';
-                        }  
+                        }
                         ?>
                       <form method="post" action="<?php echo base_url(); ?>index.php/Producto/AgregarProducto" enctype="multipart/form-data">
                           <div class="form-group">
@@ -107,7 +107,7 @@
                           <div class="form-group">
                               <div class="col-md-6">
                                   <label class="control-label" for="imagen">Imagen</label>
-                                  <input type="file" id="imagen" name="imagen" class="form-control">
+                                  <input id="imagen" name="imagen[]" type="file" class="form-control" multiple />
                               </div>
                           </div>
 
