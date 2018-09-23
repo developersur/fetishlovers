@@ -123,7 +123,7 @@ $db['default'] = array(
 
 //BD Luis Matamala
 
-$db['default'] = array(
+/*$db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	'username' => 'root',
@@ -143,16 +143,16 @@ $db['default'] = array(
 	'stricton' => FALSE,
 	'failover' => array(),
 	'save_queries' => TRUE
-);
+);*/
 
 /*BD produccion*/
 
-/*$db['default'] = array(
+$db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'redelect.cl',
-	'username' => 'redelect_web',
-	'password' => 'redelect2018*',
-	'database' => 'redelect_web',
+	'hostname' => 'fetishlovers.cl',
+	'username' => 'fetishlo_web',
+	'password' => 'fetishlovers',
+	'database' => 'fetishlo_web',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -167,5 +167,5 @@ $db['default'] = array(
 	'stricton' => FALSE,
 	'failover' => array(),
 	'save_queries' => TRUE
-);*/
+);
 
