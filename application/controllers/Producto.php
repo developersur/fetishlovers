@@ -178,7 +178,7 @@ class Producto extends CI_Controller
 
 	public function Categoria()
 	{
-			$id_categoria = $_GET['id_categoria'];
+		$id_categoria = $_GET['id_categoria'];
 
 		$data['id_categoria'] = $id_categoria;
 		$data['categorias']   = $this->CategoriaModel->obtenerCategoriasActivas();
@@ -243,5 +243,12 @@ class Producto extends CI_Controller
 			//$this->load->view('/template/head');
 			//$this->load->view('Productos/Busqueda',$datos);
 			//$this->load->view('/template/footer');
+	 }
+
+	 public function vistaProducto($codigo)
+	 {
+		$this->load->view('/template/head');
+		$this->load->view('Productos/product-page');
+		$this->load->view('/template/footer');
 	 }
 }

@@ -32,6 +32,7 @@
 	<link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>assets/css/login.css" />
 	<link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>assets/css/contacto.css" />
 	<link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>assets/css/menuadmin.css" />
+	<link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>assets/css/vista-producto.css" />
 
 </head>
 

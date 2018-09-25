@@ -9,7 +9,7 @@
 				<div id="home-slick">
 					<!-- banner -->
 					<div class="banner banner-1">
-						<img src="<?php echo base_url(); ?>assets/img/productos/sensor-plus-tres-sabores.jpg" height="500" alt="">
+						<img src="<?php echo base_url(); ?>assets/img/productos/arnes-multifuncion-ultra (1).jpg" height="400" alt="">
 						<div class="banner-caption text-center">
 
 						</div>
@@ -18,7 +18,7 @@
 
 					<!-- banner -->
 					<div class="banner banner-1">
-						<img src="<?php echo base_url(); ?>assets/img/productos/set-orgasmic-ball-.jpg" height="500" alt="">
+						<img src="<?php echo base_url(); ?>assets/img/productos/feromona-pure-sex-femenina.jpg" height="400" alt="">
 						<div class="banner-caption">
 
 						</div>
@@ -27,7 +27,7 @@
 
 					<!-- banner -->
 					<div class="banner banner-1">
-						<img src="<?php echo base_url(); ?>assets/img/productos/funda-double-trouble-extension.jpg" height="500" alt="">
+						<img src="<?php echo base_url(); ?>assets/img/productos/vibrador-vertigo- (3).jpg" height="400" alt="">
 						<div class="banner-caption">
 
 						</div>
@@ -72,7 +72,7 @@
 												<span class="sale"><?php echo $p['descuento']; ?>%</span>
 										<?php } ?>
 									</div>
-									<button class="main-btn quick-view"><i class="fa fa-search-plus"></i>Ver más</button>
+									<a href="<?php echo base_url(); ?>index.php/Producto/vistaProducto/<?php echo $p["codigo"];?>"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i>Ver más</button></a>
 									<img src="<?php echo $p["imagen"]; ?>" alt="">
 								</div>
 								<div class="product-body">
