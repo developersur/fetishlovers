@@ -10,7 +10,7 @@ class ProductoModel extends CI_Model {
     public function ListarPrincipal(){
       $result_set = $this->db->query("
         select
-          id_producto,
+          producto.id_producto,
           codigo,
           producto.nombre,
           producto.descripcion,
@@ -20,14 +20,9 @@ class ProductoModel extends CI_Model {
           cantidad,
           producto.habilitado,
           nuevo,
-          categoria.nombre as categoria,
-          imagen
-        from
-          producto
-        inner join
-          categoria
-        on
-        producto.categoria=categoria.id
+          url as imagen
+        from producto
+        left join imagenes on imagenes.id_producto = producto.codigo
         where producto.habilitado = 'Si'");
     	return $result_set -> result_array();
     }

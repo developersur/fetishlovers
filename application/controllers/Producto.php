@@ -90,7 +90,7 @@ class Producto extends CI_Controller
 				 			 	 $this->load->view('Productos/AgregarProducto',$error);
 				 				 $this->load->view('/template/footer');
 							 }else {
-								 $base = 'https://www.redelect.cl/';
+								 $base = 'http://localhost/fetishlovers/';
 
 								 $data_img = array(
 				 					'id_producto' => $this->input->post('codigo'),
