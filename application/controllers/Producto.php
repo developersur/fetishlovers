@@ -126,53 +126,6 @@ class Producto extends CI_Controller
 						 $this->ProductoModel->crearProducto($data_prod);
 					 }
 		}
-
-		/*$config['upload_path'] = '././assets/img/productos';
-		$config['allowed_types'] = 'gif|jpg|png|jpeg';
-		$config['max_size'] = 1000;
-		$config['max_width'] = 5418;
-		$config['max_height'] = 3048;
-
-		$this->load->library('upload', $config);
-
-		if (!$this->upload->do_upload('imagen'))
-		{
-				$error = array('error' => $this->upload->display_errors());
-				$data['categorias'] = $this->CategoriaModel->obtenerCategoriasActivas();
-
-				$this->load->view('/template/head');
-				$this->load->view('Productos/AgregarProducto',$error);
-				$this->load->view('/template/footer');
-		} else {
-				$data = array('upload_data' => $this->upload->data());
-
-				$file_name = $this->upload->data('file_name');
-
-				$base = 'https://www.redelect.cl/';
-
-				$data = array(
-					'codigo' => $this->input->post('codigo'),
-					'nombre' => $this->input->post('nombre'),
-					'descripcion' => $this->input->post('descripcion'),
-					'precio' => $this->input->post('precio'),
-					'descuento' => $this->input->post('descuento'),
-					'marca'=> $this->input->post('marca'),
-					'cantidad' => $this->input->post('cantidad'),
-					'habilitado' => $this->input->post('habilitado'),
-					'nuevo' => $this->input->post('nuevo'),
-					'categoria' => $this->input->post('categoria'),
-					'imagen' => $base.'assets/img/productos/'.$file_name
-				);
-
-				$this->ProductoModel->crearProducto($data);
-
-				$exito = array('exito' => 'Producto creado con éxito');
-				//$data['categorias'] = $this->CategoriaModel->obtenerCategorias();
-
-				$this->load->view('/template/head');
-				$this->load->view('Productos/AgregarProducto',$exito);
-				$this->load->view('/template/footer');
-		}*/
 	}
 
 
@@ -247,8 +200,10 @@ class Producto extends CI_Controller
 
 	 public function vistaProducto($codigo)
 	 {
-		$this->load->view('/template/head');
-		$this->load->view('Productos/product-page');
-		$this->load->view('/template/footer');
+		 	$datos['producto'] = $this->ProductoModel->detalleProducto($codigo);
+
+			$this->load->view('/template/head');
+			$this->load->view('Productos/product-page', $datos);
+			$this->load->view('/template/footer');
 	 }
 }

@@ -1,11 +1,11 @@
 <script>
-$(document).ready(function(){
+/*$(document).ready(function(){
     // Valida el Rut
     $('#rut_con').rut();
     $('#rt').rut();
-});
+});*/
 
-function recuperar_pass(){
+/*function recuperar_pass(){
     $('.modal').modal('show')
     //$('#myModal').modal('hide')
 }
@@ -19,7 +19,7 @@ function valida_rut(){
     .done(function( msg ) {
         alert(msg);
     });
-}
+}*/
 </script>
 
 <div class="container" id="login">

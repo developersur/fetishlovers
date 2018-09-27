@@ -60,6 +60,11 @@ Table OF Contents
 	Typography
 \*----------------------------*/
 
+/*****CARRITO*/
+#mi-carrito{
+  left: 10% !important;
+}
+/*******/
 /*head*/
 #span_correo{
   margin-left: 1%;
@@ -593,13 +598,13 @@ textarea.input {
   background: #FFF;
   -webkit-box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.175);
-  z-index: 100;
+  z-index: 20;
   top: 100%;
   min-width: 200px;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: 0.3s all;
-  transition: 0.3s all;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .dropdown.open>.custom-menu {
@@ -611,7 +616,7 @@ textarea.input {
 
 .dropdown.default-dropdown>.custom-menu {
   border-top: 2px solid #FC01DA;
-  left: 50%;
+  left: 70%;
   -webkit-transform: translateX(-50%) translateY(15px);
   -ms-transform: translateX(-50%) translateY(15px);
   transform: translateX(-50%) translateY(15px);

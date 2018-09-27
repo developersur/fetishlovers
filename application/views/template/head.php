@@ -27,7 +27,7 @@
 
 	<!-- Custom stlylesheet -->
 	<link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css" />
-	
+
 	<!-- mis estilos -->
 	<link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>assets/css/login.css" />
 	<link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>assets/css/contacto.css" />
@@ -118,12 +118,12 @@
 								<br>
 								<!--<span>35.20$</span>-->
 							</a>
-							<div class="custom-menu">
+							<div class="custom-menu" id="mi-carrito">
 								<div id="shopping-cart">
 									<div class="shopping-cart-list">
 										<div class="product product-widget">
 											<div class="product-thumb">
-												<img src="<?php echo base_url(); ?>assets/img/productos/anillo-vibrador-chester.jpg" alt="">
+												<img src="" alt="">
 											</div>
 											<div class="product-body">
 												<h3 class="product-price">$32.50 <span class="qty">x3</span></h3>
@@ -133,7 +133,7 @@
 										</div>
 										<div class="product product-widget">
 											<div class="product-thumb">
-												<img src="<?php echo base_url(); ?>assets/img/productos/sensor-plus-tres-sabores.jpg" alt="">
+												<img src="" alt="">
 											</div>
 											<div class="product-body">
 												<h3 class="product-price">$32.50 <span class="qty">x3</span></h3>
@@ -143,8 +143,8 @@
 										</div>
 									</div>
 									<div class="shopping-cart-btns">
-										<button class="main-btn">View Cart</button>
-										<button class="primary-btn">Checkout <i class="fa fa-arrow-circle-right"></i></button>
+										<button class="main-btn">Ver carrito</button>
+										<button class="primary-btn">Comprar <i class="fa fa-arrow-circle-right"></i></button>
 									</div>
 								</div>
 							</div>
@@ -179,7 +179,7 @@
 						$categorias = $this->CategoriaModel->obtenerCategoriasActivas();
 						foreach($categorias->result() as $categoria) { ?>
 							<li><a href="<?php echo base_url(); ?>index.php/Producto/Categoria?id_categoria=<?php echo $categoria->id; ?>"><?php echo $categoria->nombre; ?></a></li>
-						<?php } 
+						<?php }
 					?>
 					</ul>
 				</div>
