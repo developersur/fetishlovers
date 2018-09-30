@@ -29,6 +29,15 @@
                 </ul>
             </li>
             <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Banner
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                <li><a href="#">Listar</a></li>
+                <li><a href="#">Agregar</a></li>
+                <li><a href="#">Modificar</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Otros
                 <span class="caret"></span></a>
                 <ul class="dropdown-menu">

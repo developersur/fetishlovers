@@ -31,18 +31,6 @@
 									</div>
 								<?php } ?>
 							<?php } ?>
-							<!--<div class="product-view">
-								<img src="./img/thumb-product01.jpg" alt="">
-							</div>
-							<div class="product-view">
-								<img src="./img/thumb-product02.jpg" alt="">
-							</div>
-							<div class="product-view">
-								<img src="./img/thumb-product03.jpg" alt="">
-							</div>
-							<div class="product-view">
-								<img src="./img/thumb-product04.jpg" alt="">
-							</div>-->
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -75,8 +63,28 @@
 							</div>
 							<p><strong>Disponibilidad:</strong> En Stock</p>
 							<!--<p><strong>Brand:</strong> E-SHOP</p>-->
+							<div class="product-btns">
+								<div class="qty-input">
+									<span class="text-uppercase">QTY: </span>
+									<input class="input" type="number">
+								</div>
+								<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al carro</button>
+								<div class="pull-right">
+									<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
+									<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
+									<button class="main-btn icon-btn"><i class="fa fa-share-alt"></i></button>
+								</div>
+							</div>
 						</div>
 					</div>
+				</div>
+				<div class="col-md-12">
+						<div class="product-tab">
+							<ul class="tab-nav">
+								<li class="active"><a data-toggle="tab" href="#tab1">Descripción</a></li>
+								<li><a data-toggle="tab" href="#tab1">Detalle</a></li>
+							</ul>
+						</div>
 				</div>
 				<!-- /Product Details -->
 			</div>

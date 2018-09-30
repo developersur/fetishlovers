@@ -13,6 +13,8 @@ class Inicio extends CI_Controller
 		$this->load->model('ProductoModel');
 		// carga los datos
 		$this->load->model('DatosModel');
+		// carga carousel
+		$this->load->model('CarouselModel');
 	}
 
 	public function index()

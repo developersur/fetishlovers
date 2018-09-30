@@ -8,31 +8,18 @@
 				<!-- home slick -->
 				<div id="home-slick">
 					<!-- banner -->
-					<div class="banner banner-1">
-						<img src="<?php echo base_url(); ?>assets/img/productos/arnes-multifuncion-ultra (1).jpg" height="400" alt="">
-						<div class="banner-caption text-center">
+					<?php
+					$datos = $this->CarouselModel->obtenerImg();
+					foreach($datos->result() as $dato)
+					{?>
+						<div class="banner banner-1">
+							<img src="<?php echo $dato->url;?>" height="400" alt="">
+							<div class="banner-caption text-center">
 
+							</div>
 						</div>
-					</div>
-					<!-- /banner -->
-
-					<!-- banner -->
-					<div class="banner banner-1">
-						<img src="<?php echo base_url(); ?>assets/img/productos/feromona-pure-sex-femenina.jpg" height="400" alt="">
-						<div class="banner-caption">
-
-						</div>
-					</div>
-					<!-- /banner -->
-
-					<!-- banner -->
-					<div class="banner banner-1">
-						<img src="<?php echo base_url(); ?>assets/img/productos/vibrador-vertigo- (3).jpg" height="400" alt="">
-						<div class="banner-caption">
-
-						</div>
-					</div>
-					<!-- /banner -->
+					<?php
+					}?>
 				</div>
 				<!-- /home slick -->
 			</div>
