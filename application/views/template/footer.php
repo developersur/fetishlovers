@@ -71,10 +71,10 @@
 				<div class="col-md-3 col-sm-6 col-xs-6">
 					<div class="footer">
 						<h3 class="footer-header">Mantente conectado</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+						<p>Ingresa tu correo y enterate de todas nuestras ofertas y promociones</p>
 						<form>
 							<div class="form-group">
-								<input class="input" placeholder="Enter Email Address">
+								<input class="input" placeholder="Ingresa tu email">
 							</div>
 							<button class="primary-btn">Únete a nosotros</button>
 						</form>
