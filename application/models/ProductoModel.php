@@ -67,7 +67,20 @@ class ProductoModel extends CI_Model {
 
     function obtenerProductos()
   	{
-  		$query = $this->db->get('producto');
+  		$query = $this->db->query("select producto.id_producto,
+                                  codigo,
+                                  producto.nombre,
+                                  producto.descripcion,
+                                  precio,
+                                  descuento,
+                                  marca,
+                                  cantidad,
+                                  producto.habilitado,
+                                  nuevo,
+                                  url as imagen
+                              from producto
+                              left join imagenes on imagenes.id_producto = producto.codigo
+                              group by producto.id_producto");
 
   		if($query->num_rows() > 0)
   		{

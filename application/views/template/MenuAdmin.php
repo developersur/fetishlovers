@@ -23,9 +23,9 @@
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categorías
                 <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                <li><a href="#">Listar</a></li>
-                <li><a href="#">Agregar</a></li>
-                <li><a href="#">Modificar</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/Categoria/viewCategorias">Listar</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/Categoria/addCategoria">Agregar</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/Categoria/modCategoria">Modificar</a></li>
                 </ul>
             </li>
             <li class="dropdown">

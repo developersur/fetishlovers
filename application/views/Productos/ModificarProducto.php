@@ -190,7 +190,7 @@
           <div class="form-group">
             <label for="descripcion" class="col-sm-2 control-label">Descripción</label>
             <div class="col-sm-10">
-              <textarea minlength=2 maxlength=500 class="form-control" id="descripcion_prod_edit" name="descripcion" rows="3" required></textarea>
+              <textarea minlength=2 maxlength=500 class="form-control" id="descripcion_prod_edit" name="descripcion" rows="3"></textarea>
             </div>
           </div>
           <div class="form-group">

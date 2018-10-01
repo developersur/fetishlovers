@@ -50,8 +50,8 @@ class Producto extends CI_Controller
 		$data['productos'] = $this->ProductoModel->obtenerProductos();
 
         $this->load->view('/template/head');
-				$this->load->view('Productos/ModificarProducto', $data);
-				$this->load->view('/template/footer');
+		$this->load->view('Productos/ModificarProducto', $data);
+		$this->load->view('/template/footer');
     }
 
 	public function agregarProducto()
