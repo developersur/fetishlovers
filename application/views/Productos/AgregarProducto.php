@@ -1,3 +1,20 @@
+<script>
+  function valida_codigo(){
+    var codigo = $("#codigo").val();
+
+    //alert(codigo);
+    $.ajax({
+      method: "post",
+      url: "<?php echo base_url(); ?>index.php/Producto/valida_codigo/"+codigo
+      //data: { codigo: codigo}
+    })
+      .done(function( msg ) {
+        if(msg){
+          alert("!Código ya existe!");
+        }
+      });
+    }
+</script>
 <div class="container" id="menuadmin">
     <div class="row">
         <div class="">
@@ -22,7 +39,7 @@
                           <div class="form-group">
                               <div class="col-md-6">
                                   <label class="control-label" for="codigo">Código<font color="red">*</font></label>
-                                  <input id="codigo" name="codigo" type="text" placeholder="Código" class="form-control" required>
+                                  <input id="codigo" name="codigo" type="text" placeholder="Código" class="form-control" onchange="valida_codigo()" required>
                               </div>
                           </div>
                           <div class="form-group">

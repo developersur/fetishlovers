@@ -185,4 +185,20 @@ class ProductoModel extends CI_Model {
                 and producto.codigo = $codigo");
       	return $result_set->result_array();
     }
+
+    public function val_cod($codigo)
+    {
+        $res = $this->db->query("
+        select *
+        from producto
+        where codigo = $codigo");
+
+        if($res->num_rows() > 0)
+        {
+          return true;
+        }else{
+          return false;
+        }
+    }
+
   }

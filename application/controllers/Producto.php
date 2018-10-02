@@ -206,4 +206,11 @@ class Producto extends CI_Controller
 			$this->load->view('Productos/product-page', $datos);
 			$this->load->view('/template/footer');
 	 }
+
+	 public function valida_codigo($codigo)
+	 {
+			$res = $this->ProductoModel->val_cod($codigo);
+
+			echo $res;
+	 }
 }
