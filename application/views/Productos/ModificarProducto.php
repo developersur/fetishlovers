@@ -1,5 +1,6 @@
 <script>
-  function open_edit_prod(id, nombre, descripcion, precio){
+  function open_edit_prod(codigo, id, nombre, descripcion, precio){
+    $('#codigo_prod_edit').val(codigo);
     $('#nombre_prod_edit').val(nombre);
     $('#descripcion_prod_edit').val(descripcion);
     $('#precio_prod_edit').val(precio);
@@ -105,6 +106,7 @@
               <table id="mod_producto" class="table table-bordeder">
                 <thead class="cabecera_dark">
                   <tr>
+                    <th>Código</th>
                     <th>Nombre</th>
                     <th>Descripción</th>
                     <th>Precio</th>
@@ -122,6 +124,7 @@
                     {
                     ?>
                     <tr>
+                      <td><?php echo $producto->codigo; ?></td>
                       <td><?php echo $producto->nombre; ?></td>
                       <td><?php echo $producto->descripcion; ?></td>
                       <td><?php echo $producto->precio; ?></td>
@@ -156,7 +159,7 @@
                         </label>
                       </td>
                       <td><img src="<?php echo $producto->imagen; ?>" alt="" width="30" height="30"></td>
-                      <td><button type="button" class="btn btn-info btn-xs" onclick="open_edit_prod('<?=$producto->id_producto?>','<?=$producto->nombre?>','<?=$producto->descripcion?>','<?=$producto->precio?>')">Modificar</button></td>
+                      <td><button type="button" class="btn btn-info btn-xs" onclick="open_edit_prod('<?=$producto->codigo?>','<?=$producto->id_producto?>','<?=$producto->nombre?>','<?=$producto->descripcion?>','<?=$producto->precio?>')">Modificar</button></td>
                     </tr>
                     <?php
                     }
@@ -181,6 +184,12 @@
       <div class="modal-body">
 
         <form class="form-horizontal" method="post" action="<?php echo base_url();?>index.php/Producto/editarProducto">
+          <div class="form-group">
+            <label for="codigo" class="col-sm-2 control-label">Código</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="codigo_prod_edit" name="codigo" disabled>
+            </div>
+          </div>
           <div class="form-group">
             <label for="nombre" class="col-sm-2 control-label">Nombre</label>
             <div class="col-sm-10">

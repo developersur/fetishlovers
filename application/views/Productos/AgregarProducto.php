@@ -28,11 +28,11 @@
                         <?php
                         if(isset($error))
                         {
-                            echo '<div class="alert alert-danger" role="alert">'.$error.'</div>';
+                            echo '<div class="alert alert-danger" role="alert">'.$error['error'].'</div>';
                         }
                         if(isset($exito))
                         {
-                            echo '<div class="alert alert-success" role="alert">'.$exito.'</div>';
+                            echo '<div class="alert alert-success" role="alert">'.$exito['exito'].'</div>';
                         }
                         ?>
                       <form method="post" action="<?php echo base_url(); ?>index.php/Producto/AgregarProducto" enctype="multipart/form-data">

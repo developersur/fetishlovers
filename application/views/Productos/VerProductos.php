@@ -40,6 +40,7 @@
               <table id="ltdo_producto" class="table table-bordered">
                 <thead class="cabecera_dark">
                   <tr>
+                    <th>Código</th>
                     <th>Nombre</th>
                     <th>Descripción</th>
                     <th>Precio</th>
@@ -56,6 +57,7 @@
                     {
                     ?>
                     <tr>
+                      <td><?php echo $producto->codigo; ?></td>
                       <td><?php echo $producto->nombre; ?></td>
                       <td><?php echo $producto->descripcion; ?></td>
                       <td><?php echo $producto->precio; ?></td>

@@ -18,6 +18,7 @@
 									$nuevo = $p['nuevo'];
 									$descuento = $p['descuento'];
 									$nombre = $p['nombre'];
+									$descripcion = $p['descripcion'];
 									$precio = $p['precio'];
 									?>
 								<?php } ?>
@@ -82,8 +83,16 @@
 						<div class="product-tab">
 							<ul class="tab-nav">
 								<li class="active"><a data-toggle="tab" href="#tab1">Descripción</a></li>
-								<li><a data-toggle="tab" href="#tab1">Detalle</a></li>
+								<li><a data-toggle="tab" href="#tab2">Detalle</a></li>
 							</ul>
+						</div>
+						<div class="tab-content clearfix">
+						  <div class="tab-pane active" id="tab1">
+			          <h4><?php echo $descripcion; ?></h4>
+							</div>
+							<div class="tab-pane active" id="tab2">
+			          <h4></h4>
+							</div>
 						</div>
 				</div>
 				<!-- /Product Details -->

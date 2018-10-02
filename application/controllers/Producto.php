@@ -40,8 +40,8 @@ class Producto extends CI_Controller
         $data['categorias'] = $this->CategoriaModel->obtenerCategoriasActivas();
 
         $this->load->view('/template/head');
-		$this->load->view('Productos/AgregarProducto',$data);
-		$this->load->view('/template/footer');
+				$this->load->view('Productos/AgregarProducto',$data);
+				$this->load->view('/template/footer');
     }
 
 	public function modProducto()
@@ -84,10 +84,11 @@ class Producto extends CI_Controller
 
 							 if(empty($uploadData))
 							 {
-								 $error = array('error' => $this->upload->display_errors());
+								 $data['error'] = array('error' => $this->upload->display_errors());
+								 $data['categorias'] = $this->CategoriaModel->obtenerCategoriasActivas();
 
 				 				 $this->load->view('/template/head');
-				 			 	 $this->load->view('Productos/AgregarProducto',$error);
+				 			 	 $this->load->view('Productos/AgregarProducto',$data);
 				 				 $this->load->view('/template/footer');
 							 }else {
 								 $base = base_url();
@@ -99,10 +100,11 @@ class Producto extends CI_Controller
 
 								 $this->ProductoModel->crearImagen($data_img);
 
-				 				 $exito = array('exito' => 'Producto creado con éxito');
+				 				 $data['exito'] = array('exito' => 'Producto creado con éxito');
+								 $data['categorias'] = $this->CategoriaModel->obtenerCategoriasActivas();
 
 				 				 $this->load->view('/template/head');
-				 				 $this->load->view('Productos/AgregarProducto',$exito);
+				 				 $this->load->view('Productos/AgregarProducto',$data);
 				 				 $this->load->view('/template/footer');
 							 }
 			     }
