@@ -46,7 +46,8 @@ class Producto extends CI_Controller
 
 	public function modProducto()
     {
-        //$data['categorias'] = $this->CategoriaModel->obtenerCategorias();
+		//$data['categorias'] = $this->CategoriaModel->obtenerCategorias();
+		$data['categorias'] = $this->CategoriaModel->obtenerCategoriasActivas();
 		$data['productos'] = $this->ProductoModel->obtenerProductos();
 
         $this->load->view('/template/head');

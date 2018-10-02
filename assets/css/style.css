@@ -60,7 +60,13 @@ Table OF Contents
 	Typography
 \*----------------------------*/
 
-/****/
+/*secion busqueda*/
+#section_busqueda{
+  margin-top: 20% !important;
+}
+/**/
+
+/**switch**/
 .switch {
   position: relative;
   display: inline-block;

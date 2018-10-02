@@ -81,8 +81,8 @@
 
 					<!-- Search -->
 					<div class="header-search">
-						<form>
-							<input class="input search-input" type="text" placeholder="¿Qué estas buscando?">
+						<form method="post" action="<?php echo base_url(); ?>index.php/Producto/buscaProducto">
+							<input class="input search-input" type="text" name="texto_buscar" placeholder="¿Qué estas buscando?">
 							<button class="search-btn"><i class="fa fa-search"></i></button>
 						</form>
 					</div>

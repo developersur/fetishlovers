@@ -1,8 +1,11 @@
 <script>
-  function open_edit_prod(codigo, id, nombre, descripcion, precio){
+  function open_edit_prod(codigo, id, nombre, descripcion, precio, id_categoria){
+    document.getElementById('form_upd_prod').reset();
+
     $('#codigo_prod_edit').val(codigo);
     $('#nombre_prod_edit').val(nombre);
     $('#descripcion_prod_edit').val(descripcion);
+    $("#categoria_prod_edit > [value="+id_categoria+"]").attr("selected", "true");
     $('#precio_prod_edit').val(precio);
     $('#id_prod_edit').val(id);
 
@@ -109,6 +112,7 @@
                     <th>Código</th>
                     <th>Nombre</th>
                     <th>Descripción</th>
+                    <th>Categoría</th>
                     <th>Precio</th>
                     <th>Habilitado</th>
                     <th>Nuevo</th>
@@ -127,6 +131,7 @@
                       <td><?php echo $producto->codigo; ?></td>
                       <td><?php echo $producto->nombre; ?></td>
                       <td><?php echo $producto->descripcion; ?></td>
+                      <td><?php echo $producto->nombre_categoria; ?></td>
                       <td><?php echo $producto->precio; ?></td>
                       <td>
                         <label class="switch">
@@ -159,7 +164,7 @@
                         </label>
                       </td>
                       <td><img src="<?php echo $producto->imagen; ?>" alt="" width="30" height="30"></td>
-                      <td><button type="button" class="btn btn-info btn-xs" onclick="open_edit_prod('<?=$producto->codigo?>','<?=$producto->id_producto?>','<?=$producto->nombre?>','<?=$producto->descripcion?>','<?=$producto->precio?>')">Modificar</button></td>
+                      <td><button type="button" class="btn btn-info btn-xs" onclick="open_edit_prod('<?=$producto->codigo?>','<?=$producto->id_producto?>','<?=$producto->nombre?>','<?=$producto->descripcion?>','<?=$producto->precio?>','<?=$producto->id_categoria?>')">Modificar</button></td>
                     </tr>
                     <?php
                     }
@@ -183,7 +188,7 @@
       </div>
       <div class="modal-body">
 
-        <form class="form-horizontal" method="post" action="<?php echo base_url();?>index.php/Producto/editarProducto">
+        <form id="form_upd_prod" class="form-horizontal" method="post" action="<?php echo base_url();?>index.php/Producto/editarProducto">
           <div class="form-group">
             <label for="codigo" class="col-sm-2 control-label">Código</label>
             <div class="col-sm-10">
@@ -202,6 +207,24 @@
               <textarea minlength=2 maxlength=500 class="form-control" id="descripcion_prod_edit" name="descripcion" rows="3"></textarea>
             </div>
           </div>
+          
+          <div class="form-group">
+              <label class="col-sm-2 control-label" for="categoria">Categoria<font color="red">*</font></label>
+              <div class="col-sm-10">
+                <select name="categoria" id="categoria_prod_edit" class="form-control" required>
+                    <?php
+                    if(isset($categorias)){
+                      foreach($categorias->result() as $categoria)
+                      {
+                      ?>
+                      <option value="<?php echo $categoria->id; ?>"><?php echo $categoria->nombre; ?></option>
+                      <?php
+                      }
+                    }?>
+                </select>
+              </div>
+          </div>
+          
           <div class="form-group">
             <label for="precio" class="col-sm-2 control-label">Precio</label>
             <div class="col-sm-10">

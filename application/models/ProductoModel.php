@@ -77,9 +77,12 @@ class ProductoModel extends CI_Model {
                                   cantidad,
                                   producto.habilitado,
                                   nuevo,
-                                  url as imagen
+                                  url as imagen,
+                                  categoria.nombre as nombre_categoria,
+                                  categoria.id as id_categoria
                               from producto
                               left join imagenes on imagenes.id_producto = producto.codigo
+                              left join categoria on producto.categoria = categoria.id
                               group by producto.id_producto");
 
   		if($query->num_rows() > 0)
@@ -146,11 +149,27 @@ class ProductoModel extends CI_Model {
 
       $data_invertida = implode($invertir, "%");
 
-      $res = $this->db->query("select * from producto where (nombre like '%".$data_origin."%' or nombre like '".$data_invertida."') and habilitado='Si'");
+      $res = $this->db->query("select 
+                                  producto.id_producto,
+                                  codigo,
+                                  producto.nombre,
+                                  producto.descripcion,
+                                  precio,
+                                  descuento,
+                                  marca,
+                                  cantidad,
+                                  producto.habilitado,
+                                  nuevo,
+                                  url as imagen
+                               from producto
+                               left join imagenes on imagenes.id_producto = producto.codigo 
+                               where (nombre like '%".$data_origin."%' or nombre like '".$data_invertida."') 
+                                  and habilitado='Si'
+                               group by producto.id_producto");
 
       if($res->num_rows() > 0)
       {
-        return $res;
+        return $res->result_array();
       }else{
         return false;
       }
