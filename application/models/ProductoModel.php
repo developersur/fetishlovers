@@ -149,7 +149,7 @@ class ProductoModel extends CI_Model {
 
       $data_invertida = implode($invertir, "%");
 
-      $res = $this->db->query("select 
+      $res = $this->db->query("select
                                   producto.id_producto,
                                   codigo,
                                   producto.nombre,
@@ -162,8 +162,8 @@ class ProductoModel extends CI_Model {
                                   nuevo,
                                   url as imagen
                                from producto
-                               left join imagenes on imagenes.id_producto = producto.codigo 
-                               where (nombre like '%".$data_origin."%' or nombre like '".$data_invertida."') 
+                               left join imagenes on imagenes.id_producto = producto.codigo
+                               where (nombre like '%".$data_origin."%' or nombre like '".$data_invertida."')
                                   and habilitado='Si'
                                group by producto.id_producto");
 
@@ -177,7 +177,7 @@ class ProductoModel extends CI_Model {
 
     public function editProducto($data)
     {
-      $res = $this->db->query("update producto set nombre='".$data['nombre']."', descripcion='".$data['descripcion']."', precio=".$data['precio']."
+      $res = $this->db->query("update producto set nombre='".$data['nombre']."', descripcion='".$data['descripcion']."', precio=".$data['precio'].", categoria=".$data['categoria']."
                                 where id_producto = ".$data['id']);
 
       return $res;

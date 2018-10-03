@@ -50,7 +50,7 @@ class Producto extends CI_Controller
 		$data['categorias'] = $this->CategoriaModel->obtenerCategoriasActivas();
 		$data['productos'] = $this->ProductoModel->obtenerProductos();
 
-        $this->load->view('/template/head');
+    $this->load->view('/template/head');
 		$this->load->view('Productos/ModificarProducto', $data);
 		$this->load->view('/template/footer');
     }
@@ -185,6 +185,7 @@ class Producto extends CI_Controller
 			$data = array(
 				'nombre' => $this->input->post('nombre'),
 				'descripcion' => $this->input->post('descripcion'),
+				'categoria' => $this->input->post('categoria'),
 				'precio' => $this->input->post('precio'),
 				'id' => $this->input->post('id')
 			);
