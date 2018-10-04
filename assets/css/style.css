@@ -59,6 +59,16 @@ Table OF Contents
 /*----------------------------*\
 	Typography
 \*----------------------------*/
+/*panel quienes somos*/
+.panel-heading{
+  color: white !important;
+  background-color: #FC01DA !important;
+  border-radius: 0% !important;
+  -webkit-border-radius: 0% !important;
+  -moz-border-radius: 0% !important;
+  -ms-border-radius: 0% !important;
+  -o-border-radius: 0% !important;
+}
 
 /*secion busqueda*/
 #section_busqueda{

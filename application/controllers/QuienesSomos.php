@@ -13,6 +13,15 @@ class QuienesSomos extends CI_Controller {
 		$this->load->model('DatosModel');
 	}
 
+	public function index()
+	{
+			$data['quienesSomos'] = $this->QuienesSomosModel->obtenerQuienesSomos();
+
+			$this->load->view('/template/head');
+			$this->load->view('quienesSomos/index', $data);
+			$this->load->view('/template/footer');
+	}
+
 	public function obtenerQS()
 	{
 		$res = $this->QuienesSomosModel->obtenerQuienesSomos();

@@ -35,14 +35,49 @@
 	<link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>assets/css/vista-producto.css" />
 	<link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>assets/css/porcategoria.css" />
 
+	<!--Jquery confirm-->
+	<!--<link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>assets/css/jquery-confirm.css"/>-->
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126693551-1"></script>
 	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+	  	window.dataLayer = window.dataLayer || [];
+	  	function gtag(){dataLayer.push(arguments);}
+	  	gtag('js', new Date());
+	  	gtag('config', 'UA-126693551-1');
 
-	  gtag('config', 'UA-126693551-1');
+
+		function mostrar_qsomos()
+		{
+			$.confirm({
+				columnClass: 'col-md-8 col-md-offset-2',
+				content: function () {
+					var self = this;
+					return $.ajax({
+						url: "<?php echo base_url(); ?>index.php/QuienesSomos/obtenerQS",
+						method: 'post',
+					}).done(function (response) {
+						var val = [];
+						var newData = JSON.parse(response);
+
+						newData.forEach(function(value, index) {
+							val[index] = value;
+						});
+
+						self.setContent(val[1]);
+						self.setTitle(val[0]);
+					}).fail(function(){
+						self.setContent('Error al cargar datos');
+					});
+				},
+				buttons: {
+					Cerrar: function () {
+					}
+				},
+				type: 'dark',
+			});
+		}
+
 	</script>
 
 </head>
@@ -201,7 +236,7 @@
 					<span class="menu-header">Menu <i class="fa fa-bars"></i></span>
 					<ul class="menu-list">
 						<li><a href="<?php echo base_url(); ?>">Inicio</a></li>
-						<li><a href="#">Nosotros</a></li>
+						<li><a href="<?php echo base_url(); ?>index.php/QuienesSomos">Quienes somos</a></li>
 						<li><a href="<?php echo base_url(); ?>index.php/Contacto">Contactanos</a></li>
 					</ul>
 				</div>

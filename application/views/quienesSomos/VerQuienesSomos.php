@@ -11,10 +11,10 @@
 
 <div class="container" id="menuadmin">
     <div class="row">
-        <div class="col-sm-3 col-md-3">
+        <div class="">
             <?php $this->load->view('template/MenuAdmin'); ?>
         </div>
-        <div class="col-sm-9 col-md-9">
+        <div class="col-sm-9 col-md-9 col-md-offset-3">
           <fieldset>
           <legend class="text-center header">Quienes Somos</legend>
               <div class="table-responsive">
@@ -36,7 +36,7 @@
                     <tr>
                       <td><?php echo $quien->titulo; ?></td>
                       <td><?php echo $quien->descripcion; ?></td>
-                      <td><button type="button" class="btn btn-info btn-xs" onclick="open_edit_qs('<?=$quien->id?>','<?=$quien->titulo?>','<?=$quien->descripcion?>')">Modificar</button></td>
+                      <td><button type="button" class="btn btn-info btn-xs" onclick="open_edit_qs('<?php echo $quien->id; ?>','<?php echo $quien->titulo; ?>','<?php echo $quien->descripcion; ?>')">Modificar</button></td>
                     </tr>
                     <?php
                     }
