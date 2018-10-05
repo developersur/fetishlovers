@@ -93,8 +93,10 @@
 					$datos = $this->DatosModel->obtenerDatos();
 					foreach($datos->result() as $dato)
 					{
-						echo '<font><i class="fa fa-mobile"></i>'.$dato->telefono.'</font>';
-						echo '<font><i class="fa fa-envelope"></i>'.$dato->correo.'</font>';
+						echo '&nbsp;&nbsp;<i class="fa fa-mobile"></i>&nbsp;+56'.$dato->celular;
+						echo '&nbsp;&nbsp;<i class="fa fa-phone"></i>&nbsp;'.$dato->telefono;
+						echo '&nbsp;&nbsp;<i class="fa fa-envelope"></i>&nbsp;'.$dato->correo;
+						echo '&nbsp;&nbsp;<i class="fa fa-home"></i>&nbsp;'.$dato->direccion;
 					} ?>
 				</div>
 			</div>

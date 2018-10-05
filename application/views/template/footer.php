@@ -60,8 +60,15 @@
 					<div class="footer">
 						<h3 class="footer-header">Nosotros</h3>
 						<ul class="list-links">
-							<li><a href="#">telefono</a></li>
-							<li><a href="#">correo</a></li>
+							<?php
+							$datos = $this->DatosModel->obtenerDatos();
+							foreach($datos->result() as $dato)
+							{
+								echo '<i class="fa fa-mobile"></i>&nbsp;+56'.$dato->celular.'<br>';
+								echo '<i class="fa fa-phone"></i>&nbsp;'.$dato->telefono.'<br>';
+								echo '<i class="fa fa-envelope"></i>&nbsp;'.$dato->correo.'<br>';
+								echo '<i class="fa fa-home"></i>&nbsp;'.$dato->direccion.'<br>';
+							} ?>
 						</ul>
 					</div>
 				</div>
