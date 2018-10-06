@@ -187,6 +187,7 @@ class Producto extends CI_Controller
 				'descripcion' => $this->input->post('descripcion'),
 				'categoria' => $this->input->post('categoria'),
 				'precio' => $this->input->post('precio'),
+				'descuento' => $this->input->post('descuento'),
 				'id' => $this->input->post('id')
 			);
 

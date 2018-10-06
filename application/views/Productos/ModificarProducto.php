@@ -1,5 +1,5 @@
 <script>
-  function open_edit_prod(codigo, id, nombre, descripcion, precio, id_categoria){
+  function open_edit_prod(codigo, id, nombre, descripcion, precio, id_categoria, descuento){
     document.getElementById('form_upd_prod').reset();
 
     $('#codigo_prod_edit').val(codigo);
@@ -7,6 +7,7 @@
     $('#descripcion_prod_edit').val(descripcion);
     $("#categoria_prod_edit > [value="+id_categoria+"]").attr("selected", "true");
     $('#precio_prod_edit').val(precio);
+    $('#descuento_prod_edit').val(descuento);
     $('#id_prod_edit').val(id);
 
     $('#modal_edit_prod').modal('show');
@@ -114,6 +115,7 @@
                     <th>Descripción</th>
                     <th>Categoría</th>
                     <th>Precio</th>
+                    <th>% Descuento</th>
                     <th>Habilitado</th>
                     <th>Nuevo</th>
                     <th>Imagen</th>
@@ -133,6 +135,7 @@
                       <td><?php echo $producto->descripcion; ?></td>
                       <td><?php echo $producto->nombre_categoria; ?></td>
                       <td><?php echo $producto->precio; ?></td>
+                      <td><?php echo $producto->descuento; ?></td>
                       <td>
                         <label class="switch">
                           <?php if($producto->habilitado == 'Si')
@@ -164,7 +167,7 @@
                         </label>
                       </td>
                       <td><img src="<?php echo $producto->imagen; ?>" alt="" width="30" height="30"></td>
-                      <td><button type="button" class="btn btn-info btn-xs" onclick="open_edit_prod('<?=$producto->codigo?>','<?=$producto->id_producto?>','<?=$producto->nombre?>','<?=$producto->descripcion?>','<?=$producto->precio?>','<?=$producto->id_categoria?>')">Modificar</button></td>
+                      <td><button type="button" class="btn btn-info btn-xs" onclick="open_edit_prod('<?=$producto->codigo?>','<?=$producto->id_producto?>','<?=$producto->nombre?>','<?=$producto->descripcion?>','<?=$producto->precio?>','<?=$producto->id_categoria?>','<?=$producto->descuento?>')">Modificar</button></td>
                     </tr>
                     <?php
                     }
@@ -207,7 +210,7 @@
               <textarea minlength=2 maxlength=500 class="form-control" id="descripcion_prod_edit" name="descripcion" rows="3"></textarea>
             </div>
           </div>
-          
+
           <div class="form-group">
               <label class="col-sm-2 control-label" for="categoria">Categoria<font color="red">*</font></label>
               <div class="col-sm-10">
@@ -224,13 +227,21 @@
                 </select>
               </div>
           </div>
-          
+
           <div class="form-group">
             <label for="precio" class="col-sm-2 control-label">Precio</label>
             <div class="col-sm-10">
               <input type="number" minlength=1 maxlength=100 class="form-control" id="precio_prod_edit" name="precio" required>
             </div>
           </div>
+
+          <div class="form-group">
+            <label for="descuento" class="col-sm-2 control-label">Descuento</label>
+            <div class="col-sm-10">
+              <input type="number" minlength=0 maxlength=100 class="form-control" id="descuento_prod_edit" name="descuento">
+            </div>
+          </div>
+
           <input type="hidden" name="id" id="id_prod_edit">
       </div>
       <div class="modal-footer">

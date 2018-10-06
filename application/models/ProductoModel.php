@@ -29,6 +29,50 @@ class ProductoModel extends CI_Model {
     	return $result_set -> result_array();
     }
 
+    public function ListarDestacados(){
+      $result_set = $this->db->query("
+        select
+          producto.id_producto,
+          codigo,
+          producto.nombre,
+          producto.descripcion,
+          precio,
+          descuento,
+          marca,
+          cantidad,
+          producto.habilitado,
+          nuevo,
+          url as imagen
+        from producto
+        left join imagenes on imagenes.id_producto = producto.codigo
+        where producto.habilitado = 'Si' and producto.nuevo = 'Si'
+        group by producto.id_producto
+        ");
+    	return $result_set -> result_array();
+    }
+
+    public function ListarOfertas(){
+      $result_set = $this->db->query("
+        select
+          producto.id_producto,
+          codigo,
+          producto.nombre,
+          producto.descripcion,
+          precio,
+          descuento,
+          marca,
+          cantidad,
+          producto.habilitado,
+          nuevo,
+          url as imagen
+        from producto
+        left join imagenes on imagenes.id_producto = producto.codigo
+        where producto.habilitado = 'Si' and producto.descuento > 0
+        group by producto.id_producto
+        ");
+    	return $result_set -> result_array();
+    }
+
     public function crearProducto($data)
     {
       $query = $this->db->get_where('producto', array('codigo' => $data['codigo']));
@@ -177,7 +221,7 @@ class ProductoModel extends CI_Model {
 
     public function editProducto($data)
     {
-      $res = $this->db->query("update producto set nombre='".$data['nombre']."', descripcion='".$data['descripcion']."', precio=".$data['precio'].", categoria=".$data['categoria']."
+      $res = $this->db->query("update producto set nombre='".$data['nombre']."', descripcion='".$data['descripcion']."', precio=".$data['precio'].", descuento=".$data['descuento'].", categoria=".$data['categoria']."
                                 where id_producto = ".$data['id']);
 
       return $res;

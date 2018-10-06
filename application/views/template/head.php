@@ -110,8 +110,8 @@
 					<!-- Logo -->
 					<div class="header-logo">
 						<a class="logo" href="#">
-							<!--<img src="./img/logo.png" alt="">-->
-							<h1><label><a href="<?php echo base_url(); ?>">FetishLovers</a></label></h1>
+							<img src="<?php echo base_url();?>assets/img/Imagen1.png" alt="">
+							<!--<h1><label><a href="<?php echo base_url(); ?>">FetishLovers</a></label></h1>-->
 						</a>
 					</div>
 					<!-- /Logo -->

@@ -20,7 +20,8 @@ class Inicio extends CI_Controller
 	public function index()
 	{
 		// Productos para la pagina principal
-		$data['ProductosPrincipal'] = $this->ProductoModel->ListarPrincipal();
+		$data['productos_destacados'] = $this->ProductoModel->ListarDestacados();
+		$data['productos_ofertas'] = $this->ProductoModel->ListarOfertas();
 
 		$this->load->view('/template/head');
 		//$this->load->view('home');

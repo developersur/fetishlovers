@@ -45,10 +45,10 @@
 								<?php } ?>
 							</div>
 							<h2 class="product-name"><?php echo $nombre; ?></h2>
-							<h3 class="product-price">$<?php echo number_format($precio,0,',','.'); ?>
+							<h3 class="product-price">$<?php echo number_format($p['precio']-(($p['precio']*$p['descuento'])/100),'0',',','.'); ?>
 								<?php if($descuento!=0) { ?>
 									<del class="product-old-price">
-										$<?php echo number_format($precio+(($precio*$descuento)/100),'0',',','.'); ?>
+											$<?php echo number_format($precio,0,',','.'); ?>
 									</del>
 								<?php } ?>
 							</h3>
