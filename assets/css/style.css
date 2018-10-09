@@ -436,8 +436,8 @@ textarea.input {
 }
 
 .header-logo .logo>img {
-  width: 100%;
-  max-height: 70px;
+  /*width: 50%;*/
+  max-height: 100px;
 }
 
 /*----------------------------*\
@@ -852,7 +852,7 @@ textarea.input {
   .menu-nav .menu-list>li>a {
     color: #30323A;
   }
-  
+
   #navigation.shadow:after {
     content: "";
     position: fixed;

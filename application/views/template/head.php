@@ -78,6 +78,40 @@
 			});
 		}
 
+		 /**
+		 * Array con las imagenes y enlaces que se iran mostrando en la web
+		 */
+
+		var imagenes=new Array(
+				['<?php echo base_url(); ?>assets/img/logos/logo1.png','<?php echo base_url(); ?>'],
+				['<?php echo base_url(); ?>assets/img/logos/logo2.png','<?php echo base_url(); ?>'],
+				['<?php echo base_url(); ?>assets/img/logos/logo3.png','<?php echo base_url(); ?>'],
+				['<?php echo base_url(); ?>assets/img/logos/logo4.png','<?php echo base_url(); ?>']
+		);
+
+		/**
+		 * Funcion para cambiar la imagen y link
+		 */
+
+		function rotarImagenes()
+		{
+				// obtenemos un numero aleatorio entre 0 y la cantidad de imagenes que hay
+				var index=Math.floor((Math.random()*imagenes.length));
+				// cambiamos la imagen y la url
+				document.getElementById("imagen").src=imagenes[index][0];
+				document.getElementById("link").href=imagenes[index][1];
+		}
+
+		/**
+		 * Función que se ejecuta una vez cargada la página
+		 */
+		onload=function()
+		{
+				// Cargamos una imagen aleatoria
+				rotarImagenes();
+				// Indicamos que cada 5 segundos cambie la imagen
+				setInterval(rotarImagenes,5000);
+		}
 	</script>
 
 </head>
@@ -88,16 +122,18 @@
 		<!-- top Header -->
 		<div id="top-header">
 			<div class="container">
-				<div class="pull-left">
-					<?php
-					$datos = $this->DatosModel->obtenerDatos();
-					foreach($datos->result() as $dato)
-					{
-						echo '&nbsp;&nbsp;<i class="fa fa-mobile"></i>&nbsp;+56'.$dato->celular;
-						echo '&nbsp;&nbsp;<i class="fa fa-phone"></i>&nbsp;'.$dato->telefono;
-						echo '&nbsp;&nbsp;<i class="fa fa-envelope"></i>&nbsp;'.$dato->correo;
-						echo '&nbsp;&nbsp;<i class="fa fa-home"></i>&nbsp;'.$dato->direccion;
-					} ?>
+				<div class="">
+					<div class="col-md-12">
+						<?php
+						$datos = $this->DatosModel->obtenerDatos();
+						foreach($datos->result() as $dato)
+						{
+							echo '<div class="col-md-3"><i class="fa fa-mobile"></i>+56'.$dato->celular.'</div>';
+							echo '<div class="col-md-3"><i class="fa fa-phone"></i>'.$dato->telefono.'</div>';
+							echo '<div class="col-md-3"><i class="fa fa-envelope"></i>'.$dato->correo.'</div>';
+							echo '<div class="col-md-3"><i class="fa fa-home"></i>'.$dato->direccion.'</div>';
+						} ?>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -109,10 +145,12 @@
 				<div class="pull-left">
 					<!-- Logo -->
 					<div class="header-logo">
-						<a class="logo" href="#">
-							<img src="<?php echo base_url();?>assets/img/Imagen1.png" alt="">
-							<!--<h1><label><a href="<?php echo base_url(); ?>">FetishLovers</a></label></h1>-->
+						<a class="logo" href="#" id="link">
+							<img id="imagen" src="">
 						</a>
+						<!--<a class="logo" href="<?php echo base_url();?>">
+							<img src="<?php echo base_url();?>assets/img/logos/logo1.png" alt="">
+						</a>-->
 					</div>
 					<!-- /Logo -->
 

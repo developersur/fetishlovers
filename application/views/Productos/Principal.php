@@ -1,10 +1,10 @@
 
 <!-- HOME -->
 <div id="home">
-		<!-- container -->
-		<div class="container">
-			<!-- home wrap -->
-			<div class="home-wrap">
+	 <!-- container -->
+	 <div class="container">
+		<!-- home wrap -->
+		<div class="home-wrap">
 				<!-- home slick -->
 				<div id="home-slick">
 					<!-- banner -->
@@ -97,6 +97,7 @@
 					<?php } ?>
 				<?php } ?>
 			<!-- /row -->
+			</div>
 
 			<!-- row -->
 			<div class="row">
@@ -162,7 +163,7 @@
 					<?php } ?>
 				<?php } ?>
 			<!-- /row -->
-
+		  </div>
 		 </div>
 		<!-- /container -->
 	</div>
