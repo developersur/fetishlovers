@@ -31,89 +31,53 @@ class Banner extends CI_Controller
 		$this->load->view('/template/footer');
   }
 
-  public function formProducto()
+  public function formBanner()
   {
-      $data['categorias'] = $this->CategoriaModel->obtenerCategoriasActivas();
+      //$data['categorias'] = $this->CategoriaModel->obtenerCategoriasActivas();
 
       $this->load->view('/template/head');
-			$this->load->view('Productos/AgregarProducto',$data);
+			$this->load->view('Banner/AgregarBanner');
 			$this->load->view('/template/footer');
   }
 
 
-	public function agregarProducto()
+	public function agregarBanner()
 	{
-		$data = array();
-		if(!empty($_FILES['imagen']['name']))
+		$config['upload_path'] = '././assets/img/banner';
+		$config['allowed_types'] = 'gif|jpg|png|jpeg';
+		$config['max_size'] = 2000;
+		$config['max_width'] = 5418;
+		$config['max_height'] = 3048;
+
+		$this->load->library('upload', $config);
+
+		if (!$this->upload->do_upload('imagen'))
 		{
-					 $filesCount = count($_FILES['imagen']['name']);
-					 for($i = 0; $i < $filesCount; $i++)
-					 {
-							 $_FILES['image']['name'] = $_FILES['imagen']['name'][$i];
-							 $_FILES['image']['type'] = $_FILES['imagen']['type'][$i];
-							 $_FILES['image']['tmp_name'] = $_FILES['imagen']['tmp_name'][$i];
-							 $_FILES['image']['error'] = $_FILES['imagen']['error'][$i];
-							 $_FILES['image']['size'] = $_FILES['imagen']['size'][$i];
+				$datos['error'] = array('error' => $this->upload->display_errors());
 
-							 $uploadPath = '././assets/img/productos';
-							 $config['upload_path'] = $uploadPath;
-							 $config['allowed_types'] = 'gif|jpg|png|jpeg';
+				$this->load->view('/template/head');
+				$this->load->view('Banner/AgregarBanner',$datos);
+				$this->load->view('/template/footer');
+		} else {
+				$data = array('upload_data' => $this->upload->data());
 
-							 $this->load->library('upload', $config);
-							 $this->upload->initialize($config);
-							 if($this->upload->do_upload('image'))
-							 {
-									 $fileData = $this->upload->data();
-									 $uploadData[$i]['file_name'] = $fileData['file_name'];
-									 $uploadData[$i]['created'] = date("Y-m-d H:i:s");
-									 $uploadData[$i]['modified'] = date("Y-m-d H:i:s");
-							 }
+				$file_name = $this->upload->data('file_name');
 
-							 if(empty($uploadData))
-							 {
-								 $data['error'] = array('error' => $this->upload->display_errors());
-								 $data['categorias'] = $this->CategoriaModel->obtenerCategoriasActivas();
+				$base = base_url();
 
-				 				 $this->load->view('/template/head');
-				 			 	 $this->load->view('Productos/AgregarProducto',$data);
-				 				 $this->load->view('/template/footer');
-							 }else {
-								 $base = base_url();
+				$data = array(
+					'habilitado' => $this->input->post('habilitado'),
+					'imagen' => $base.'assets/img/banner/'.$file_name
+				);
 
-								 $data_img = array(
-				 					'id_producto' => $this->input->post('codigo'),
-				 					'url' => $base.'assets/img/productos/'.$uploadData[$i]['file_name']
-				 				 );
+				$this->BannerModel->crearBanner($data);
 
-								 $this->ProductoModel->crearImagen($data_img);
+				$datos['exito'] = array('exito' => 'Producto creado con éxito');
+				//$data['categorias'] = $this->CategoriaModel->obtenerCategorias();
 
-				 				 $data['exito'] = array('exito' => 'Producto creado con éxito');
-								 $data['categorias'] = $this->CategoriaModel->obtenerCategoriasActivas();
-
-				 				 $this->load->view('/template/head');
-				 				 $this->load->view('Productos/AgregarProducto',$data);
-				 				 $this->load->view('/template/footer');
-							 }
-			     }
-
-					 if(!empty($uploadData))
-					 {
-						 $data_prod = array(
-							'codigo' => $this->input->post('codigo'),
-							'nombre' => $this->input->post('nombre'),
-							'descripcion' => $this->input->post('descripcion'),
-							'precio' => $this->input->post('precio'),
-							'descuento' => $this->input->post('descuento'),
-							'marca'=> $this->input->post('marca'),
-							'cantidad' => $this->input->post('cantidad'),
-							'habilitado' => $this->input->post('habilitado'),
-							'nuevo' => $this->input->post('nuevo'),
-							'categoria' => $this->input->post('categoria')
-							//'imagen' => $base.'assets/img/productos/'.$file_name
-						 );
-
-						 $this->ProductoModel->crearProducto($data_prod);
-					 }
+				$this->load->view('/template/head');
+				$this->load->view('Banner/AgregarBanner',$datos);
+				$this->load->view('/template/footer');
 		}
 	}
 

@@ -9,7 +9,7 @@
 				<div id="home-slick">
 					<!-- banner -->
 					<?php
-					$datos = $this->CarouselModel->obtenerImg();
+					$datos = $this->BannerModel->obtenerImg();
 					foreach($datos->result() as $dato)
 					{?>
 						<div class="banner banner-1">

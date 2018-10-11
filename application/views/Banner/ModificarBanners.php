@@ -64,7 +64,7 @@
         </div>
         <div class="col-sm-5 col-md-5 col-md-offset-3">
           <fieldset>
-          <legend class="text-center header">Modificar producto</legend>
+          <legend class="text-center header">Editar imagen</legend>
               <div class="table-responsive">
               <table id="mod_banner" class="table table-bordered">
                 <thead class="cabecera_dark">

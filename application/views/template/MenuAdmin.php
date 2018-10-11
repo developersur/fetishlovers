@@ -32,8 +32,8 @@
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Banner
                 <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                <li><a href="<?php echo base_url(); ?>index.php/Banner/viewBanner">Listar</a></li>
-                <li><a href="<?php echo base_url(); ?>index.php/Banner/addBanner">Agregar</a></li>
+                <!--<li><a href="<?php echo base_url(); ?>index.php/Banner/viewBanner">Listar</a></li>-->
+                <li><a href="<?php echo base_url(); ?>index.php/Banner/formBanner">Agregar</a></li>
                 <li><a href="<?php echo base_url(); ?>index.php/Banner/modBanner">Modificar</a></li>
                 </ul>
             </li>

@@ -88,7 +88,7 @@
 						</div>
 						<div class="tab-content clearfix">
 						  <div class="tab-pane active" id="tab1">
-			          <h4><?php echo $descripcion; ?></h4>
+			          <label><?php echo $descripcion; ?></label>
 							</div>
 							<div class="tab-pane active" id="tab2">
 			          <h4></h4>
