@@ -1,16 +1,16 @@
-<div class="container" id="contenedor_quienessomos">
+<div class="container" id="carrito_compra">
     
 
     <?php //echo var_dump($this->cart->contents()); ?>
     <div id="resultados"></div>
 
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-9 col-md-offset-3">
         <fieldset>
             <legend class="text-center header titulo">Carrito de compras</legend>
             <div class="col-md-12">
                 <div class="listado_carrito">
-                    <table class="table">
+                    <table class="table table-bordered">
                         <thead class="cabecera_dark">
                             <tr>
                                 <th style="text-align: center">Imagen</th>

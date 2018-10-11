@@ -1541,7 +1541,8 @@ class Carro extends CI_Controller
 			//echo "Holaaaaa";
 			$this->load->view('/Carro/Carrito_cabecera');
 		} else {
-			echo "mal";
+			//$this->load->view('/Carro/Carrito_cabecera');
+			echo "malisimo";
 		};
 	}
 
@@ -1599,7 +1600,8 @@ class Carro extends CI_Controller
 		if($this->cart->update($data)) {
 			$this->load->view('/Carro/Carrito_cabecera');
 		} else {
-			echo "mal";
+			$this->load->view('/Carro/Carrito_cabecera');
+			//echo "malito";
 		}
 	}
 

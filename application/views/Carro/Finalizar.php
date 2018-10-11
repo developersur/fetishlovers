@@ -1,12 +1,12 @@
 
 
-<div class="container" id="contenedor_quienessomos">
+<div class="container" id="carrito_compra">
 
 <?php //echo var_dump($this->cart->contents()); ?>
 <div id="resultados"></div>
 
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-9 col-md-offset-3">
     <div class="pasos">
         <a href="<?php echo base_url(); ?>index.php/Carro/">Volver al Carrito</a> 
     </div>

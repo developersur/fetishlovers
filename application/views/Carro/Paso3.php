@@ -1,6 +1,6 @@
 
 
-<div class="container" id="contenedor_quienessomos">
+<div class="container" id="carrito_compra">
 
 <?php //echo var_dump($this->cart->contents()); ?>
 <div id="resultados"></div>
@@ -16,7 +16,7 @@
     <legend class="text-center header titulo">Paso 3 - Confirmación</legend>
 
             <!-- Productos del Carrito-->
-            <div class="col-md-12">
+            <div class="col-md-9 col-md-offset-3">
                 <div class="listado_carrito">
                     <table class="table">
                         <thead class="cabecera_dark">
