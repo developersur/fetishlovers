@@ -84,7 +84,7 @@
 												<input type="hidden" name="codigo_producto" id="codigo_producto" value="<?php echo $p['id_producto']; ?>">
 												<input type="hidden" name="nombre_producto" id="nombre_producto" value="<?php echo $p['nombre']; ?>">
 												<input type="hidden" name="descripcion_producto" id="descripcion_producto" value="<?php echo $p['descripcion']; ?>">
-												<input type="hidden" name="precio_producto" id="precio_producto" value="<?php echo $p['precio']; ?>">
+												<input type="hidden" name="precio_producto" id="precio_producto" value="<?php echo round($p['precio']-(($p['precio']*$p['descuento'])/100)); ?>">
 												<input type="hidden" name="imagen_producto" id="imagen_producto" value="<?php echo $p['imagen']; ?>">
 												<b>Cantidad:</b><br>
 												<input type="number" name="cantidad_producto" class="cantidad" id="cantidad_producto" value="1">

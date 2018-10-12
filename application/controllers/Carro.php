@@ -22,11 +22,9 @@ class Carro extends CI_Controller
 		$this->load->view('/template/footer');
 	}
 
-
-
 	// Validar Paso 1
-	function Validar_Paso_1(){
-
+	function Validar_Paso_1()
+	{
 		// Validacion
 		$this->form_validation->set_error_delimiters('<i class="fas fa-exclamation-triangle"></i> ', '<br>');
 		$this->form_validation->set_rules('tipo', 'Tipo', 'required');
@@ -351,7 +349,7 @@ class Carro extends CI_Controller
 		//echo var_dump($_SESSION['datos_sesion']);
 
 		$data1['reservas'] = $this->ReservaModel->Reservas();
-		
+
 		$this->load->view('/template/head');
 		$this->load->view('Carro/Paso2',$data1);
 		$this->load->view('/template/footer');
@@ -672,8 +670,8 @@ class Carro extends CI_Controller
 				'descuento'        => $descuento,
 				'total'      	   => $total
 			);
- 
-			
+
+
 			if($id_compra=$this->CompraModel->RegistrarCompra($data)) {
 
 				// Si los datos de la compra se registran correctamente se le asigna un numero de compra mayor a a cero
@@ -830,12 +828,12 @@ class Carro extends CI_Controller
 			// ----------------------------------------------- //
 
 			if($todo_bien==TRUE) {
-				
+
 				// Inicio Registra la reserva
 				if($fecha_visita!="" and $hora_visita!="") {
-					
+
 					$fecha_visita_formateada = date('Y-m-d', strtotime($fecha_visita));
-					
+
 					$datos_reserva = array(
 						'fecha'     => $fecha_visita_formateada,
 						'hora'      => $hora_visita,
@@ -1216,15 +1214,9 @@ class Carro extends CI_Controller
 			// ---------- Fin Notifica por correo ------------ //
 			// ----------------------------------------------- //
 
-
-
-
 			// Borra los datos de la sesion para que no pueda recargar y volver a guardar
 			//unset($_SESSION['datos']);
 			//unset($_SESSION['carrito']);
-
-
-
 		} else {
 			$data['error'] = "No existe información que procesar";
 		}
@@ -1233,10 +1225,6 @@ class Carro extends CI_Controller
 		$this->load->view('Carro/ProcesarPago',$data);
 		$this->load->view('/template/footer',$datac);
 	}
-
-
-
-
 
 
 	// Procesa el Pago ya sea por Webpay o Transferencia
@@ -1251,14 +1239,14 @@ class Carro extends CI_Controller
 
 		// El Cliente presiono el boton "Anular"
 		if(isset($_POST['TBK_TOKEN']) and isset($_POST['TBK_ID_SESION']) and isset($_POST['TBK_ORDEN_COMPRA'])) {
-			
+
 			// Carga Modelo
 			$this->load->model('WebpayModel');
 			$this->load->model('CompraModel');
 
 			// Recibe el token del pago webpay
         	$token_anulado = $_POST['TBK_TOKEN'];
-			
+
 			// Verifica si el pago ya esta registrado (en caso de que se recargue la pagina)
 			$verificatoken = $this->WebpayModel->VerficarPagoToken($token_anulado);
 
@@ -1277,14 +1265,14 @@ class Carro extends CI_Controller
 					'id_compra'       => $_POST['TBK_ORDEN_COMPRA'],
 					'transactionDate' => $php_date
 				);
-				
-				// Registra el pago 
+
+				// Registra el pago
 				$id_pago_webpay = $this->WebpayModel->RegistrarPago($data_pago);
-				
+
 			    // Si registra el pago correctamente (a pesar de que haya sido cancelado) registra la compra
 				if ($id_pago_webpay>0) {
-					
-					
+
+
 					// Recibe los datos de las sesiones de la compra
 					if($_SESSION['datos']!==null and $_SESSION['carrito']!==null and $_SESSION['total']!==null) {
 						$dcompra   = $_SESSION['datos'];
@@ -1407,7 +1395,7 @@ class Carro extends CI_Controller
 						// Registra el encabezado de la compra
 						if($id_compra = $this->CompraModel->RegistrarCompra($data)) {
 
-							
+
 							// ------------------------------- //
 							// - Datos a actualizar del pago - //
 							// ------------------------------- //
@@ -1474,10 +1462,10 @@ class Carro extends CI_Controller
 							}
 							// -------------------------------------- //
 
-						} 
-							
+						}
+
 						$data['error'] = "El pago ha sido abortado por el usuario";
-						
+
 						// ---------------------- //
 
 					} else {
@@ -1526,15 +1514,6 @@ class Carro extends CI_Controller
 			'descripcion'=> $descripcion_producto,
 			'imagen'     => $imagen_producto
 		);
-		//echo var_dump($insert);
-		/*
-		echo $id_producto;
-		echo $codigo_producto;
-		echo $cantidad_producto;
-		echo $precio_producto;
-		echo $descripcion_producto;
-		echo $imagen_producto;
-		*/
 
 		// Guarda los datos en la sesion del carrito
 		if($this->cart->insert($insert)) {
@@ -1545,8 +1524,6 @@ class Carro extends CI_Controller
 			echo "malisimo";
 		};
 	}
-
-
 
 	// Actualiza la cantidad del producto
 	public function Actualizar() {

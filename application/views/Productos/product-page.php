@@ -65,16 +65,19 @@
 							<p><strong>Disponibilidad:</strong> En Stock</p>
 							<!--<p><strong>Brand:</strong> E-SHOP</p>-->
 							<div class="product-btns">
-								<div class="qty-input">
-									<span class="text-uppercase">QTY: </span>
-									<input class="input" type="number">
-								</div>
-								<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al carro</button>
-								<div class="pull-right">
-									<button class="main-btn icon-btn"><i class="fa fa-heart"></i></button>
-									<button class="main-btn icon-btn"><i class="fa fa-exchange"></i></button>
-									<button class="main-btn icon-btn"><i class="fa fa-share-alt"></i></button>
-								</div>
+								<form action="<?php echo base_url(); ?>index.php/Carro/Agregar" method="POST" class="Form_Agregar">
+										<input type="hidden" name="id_producto" id="codigo_producto" value="<?php echo $p['id_producto']; ?>">
+										<input type="hidden" name="codigo_producto" id="codigo_producto" value="<?php echo $p['id_producto']; ?>">
+										<input type="hidden" name="nombre_producto" id="nombre_producto" value="<?php echo $p['nombre']; ?>">
+										<input type="hidden" name="descripcion_producto" id="descripcion_producto" value="<?php echo $p['descripcion']; ?>">
+										<input type="hidden" name="precio_producto" id="precio_producto" value="<?php echo round($p['precio']-(($p['precio']*$p['descuento'])/100)); ?>">
+										<input type="hidden" name="imagen_producto" id="imagen_producto" value="<?php echo $p['imagen']; ?>">
+											<div class="qty-input">
+												<span class="text-uppercase">Cantidad: </span>
+												<input type="number" name="cantidad_producto" class="cantidad" id="cantidad_producto" value="1">
+											</div>
+									  <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al carro</button>
+								 </form>
 							</div>
 						</div>
 					</div>

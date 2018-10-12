@@ -3,7 +3,7 @@
     <i class="fa fa-shopping-cart"></i>
     <span>Carrito</span>
     <div class="qty"><?php if(isset($productosC)) echo count($productosC); ?></div>
-</a> 
+</a>
 <div class="cart-dropdown">
     <div class="cart-list">
     <?php $productosC = $this->cart->contents(); ?>
@@ -17,7 +17,7 @@
                 <h3 class="product-name"><a href="#"><?php echo $p["name"]; ?></a></h3>
                 <h4 class="product-price"><span class="qty"><?php echo $p["qty"]; ?>x</span>$<?php echo number_format($p["price"],'0',',','.'); ?></h4>
             </div>
-            <button class="delete QuitarCabecera" rowid="<?php echo $p["rowid"]; ?>" action="index.php/Carro/QuitarCabecera"><i class="fas fa-times"></i></button> 
+            <button class="delete QuitarCabecera" rowid="<?php echo $p["rowid"]; ?>" action="index.php/Carro/QuitarCabecera"><i class="fa fa-times"></i></button> 
         </div>
     <?php } ?>
     <?php } else { ?>

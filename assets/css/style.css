@@ -410,7 +410,8 @@ textarea.input {
 #top-header {
   padding-top: 5px;
   padding-bottom: 5px;
-  border-bottom: 1px solid #F1F1F1;
+  border-bottom: 1px solid #CFCECE;
+  background-color: #EBEAEA;
 }
 
 .header-top-links>li {
