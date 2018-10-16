@@ -79,9 +79,9 @@
 		 */
 
 		var imagenes=new Array(
-				['<?php echo base_url(); ?>assets/img/logos/logo1.png','<?php echo base_url(); ?>'],
+				//['<?php echo base_url(); ?>assets/img/logos/logo1.png','<?php echo base_url(); ?>'],
 				['<?php echo base_url(); ?>assets/img/logos/logo2.png','<?php echo base_url(); ?>'],
-				['<?php echo base_url(); ?>assets/img/logos/logo3.png','<?php echo base_url(); ?>'],
+				//['<?php echo base_url(); ?>assets/img/logos/logo3.png','<?php echo base_url(); ?>'],
 				['<?php echo base_url(); ?>assets/img/logos/logo4.png','<?php echo base_url(); ?>']
 		);
 
@@ -141,12 +141,9 @@
 				<div class="pull-left">
 					<!-- Logo -->
 					<div class="header-logo">
-						<a class="logo" href="#" id="link">
-							<img id="imagen" src="">
+						<a class="logo" href="" id="link">
+							<img id="imagen" src="" width="300" height="200" alt="">
 						</a>
-						<!--<a class="logo" href="<?php echo base_url();?>">
-							<img src="<?php echo base_url();?>assets/img/logos/logo1.png" alt="">
-						</a>-->
 					</div>
 					<!-- /Logo -->
 
