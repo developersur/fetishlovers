@@ -3,7 +3,7 @@
         <div class="col-md-9 col-md-offset-3">
             <fieldset>
             <legend class="text-center header">Ingresa tus datos</legend>
-                <div class="col-md-12">
+                <div class="col-md-6 col-md-offset-3">
                     <div class="panel panel-default">
                         <div class="panel-body">
                            <form id="register-form" action="<?php echo base_url(); ?>index.php/Usuario/registrarUsuario" method="post" role="form">

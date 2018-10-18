@@ -22,7 +22,7 @@ class DatosModel extends CI_Model
 
     public function editarDatos($data)
       {
-        $res = $this->db->query("update datos set telefono='".$data['telefono']."', correo='".$data['correo']."', direccion='".$data['direccion']."'
+        $res = $this->db->query("update datos set telefono='".$data['telefono']."', celular='".$data['celular']."', correo='".$data['correo']."', direccion='".$data['direccion']."'
                                   where id = ".$data['id']);
 
         return $res;

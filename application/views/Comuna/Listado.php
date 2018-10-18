@@ -143,12 +143,12 @@
     <div class="row">
 
         <!-- Menu Izquierdo Usuario -->
-        <div class="col-sm-3 col-md-3">
+        <div class="">
             <?php $this->load->view('template/MenuAdmin'); ?>
         </div>
 
         <!-- Contenido Cliente -->
-        <div class="col-sm-9 col-md-9">
+        <div class="col-sm-9 col-md-9 col-md-offset-3">
 
 
           <fieldset>
@@ -169,13 +169,13 @@
                     </div>
                     <div class="col-md-2">
                         <div class="form-group">
-                            <label for="costo">Comuna <span class="obligatorio">*</span></label>
+                            <label for="costo">Costo <span class="obligatorio">*</span></label>
                             <input id="costo" name="costo" class="form-control">
                         </div>
                     </div>
                     <div class="col-md-2">
                         <div class="form-group">
-                            <label for="costo">Acción</label>
+                            <label for="costo">.</label>
                             <input type="submit" id="enviar" name="enviar" class="form-control" value="Guardar">
                         </div>
                     </div>
@@ -206,7 +206,7 @@
                       <td><?php echo $comuna['region']; ?></td>
                       <td><?php echo $comuna['comuna']; ?></td>
                       <td>$<?php echo number_format($comuna['costo'],'0',',','.'); ?></td>
-                      <td><a href="#" class="cambiar_costo" data-idcomuna="<?php echo $comuna['id_comuna']; ?>" data-costoanterior="<?php echo $comuna['costo']; ?>">Cambiar</a></td>
+                      <td><a href="#" class="cambiar_costo" data-idcomuna="<?php echo $comuna['id_comuna']; ?>" data-costoanterior="<?php echo $comuna['costo']; ?>">Modificar</a></td>
                       <td>
                       <label class="switch">
                         <input type="checkbox" class="cambiar_mostrar" data-idcomuna="<?php echo $comuna['id_comuna']; ?>"

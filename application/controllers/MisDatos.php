@@ -24,6 +24,7 @@ class MisDatos extends CI_Controller {
 	{
 			$data = array(
 				'telefono' => $this->input->post('telefono'),
+				'celular' => $this->input->post('celular'),
 				'correo' => $this->input->post('correo'),
 				'direccion' => $this->input->post('direccion'),
 				'id' => $this->input->post('id')

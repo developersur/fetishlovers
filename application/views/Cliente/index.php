@@ -3,12 +3,12 @@
 <div class="container" id="menuadmin">
     <div class="row">
         
-    <div class="col-sm-3 col-md-3">
+    <div class="col-sm-9 col-md-9 col-md-offset-3">
             <?php $this->load->view('template/MenuCliente'); ?>
         </div>
 
         <!-- Contenido -->
-        <div class="col-sm-9 col-md-9">
+        <div class="col-sm-9 col-md-9 col-md-offset-3">
           <fieldset>
           <legend class="text-center header">Mi Cuenta</legend>
 

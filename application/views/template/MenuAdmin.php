@@ -6,8 +6,8 @@
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Compras
                 <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                <li><a href="#">Listado de compras</a></li>
-                <li><a href="#">Costos de envío</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/Compra/Listar">Listado de compras</a></li>
+                <li><a href="<?php echo base_url(); ?>index.php/Comuna/Listar">Costo por Comuna</a></li>
                 </ul>
             </li>
             <li class="dropdown">

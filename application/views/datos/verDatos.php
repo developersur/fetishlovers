@@ -1,7 +1,8 @@
 <script>
-  function open_edit_datos(id, telefono, correo, direccion)
+  function open_edit_datos(id, telefono, celular, correo, direccion)
   {
     $('#telefono_dt').val(telefono);
+    $('#celular_dt').val(celular);
     $('#correo_dt').val(correo);
     $('#direccion_dt').val(direccion);
     $('#id_dt').val(id);
@@ -23,6 +24,7 @@
                 <thead class="cabecera_dark">
                   <tr>
                     <th>Telefono</th>
+                    <th>Celular</th>
                     <th>Correo</th>
                     <th>Dirección</th>
                     <th>Editar</th>
@@ -37,9 +39,10 @@
                     ?>
                     <tr>
                       <td><?php echo $dato->telefono; ?></td>
+                      <td><?php echo $dato->celular; ?></td>
                       <td><?php echo $dato->correo; ?></td>
                       <td><?php echo $dato->direccion; ?></td>
-                      <td><button type="button" class="btn btn-info btn-xs" onclick="open_edit_datos('<?=$dato->id?>','<?=$dato->telefono?>','<?=$dato->correo?>','<?=$dato->direccion?>')">Modificar</button></td>
+                      <td><button type="button" class="btn btn-info btn-xs" onclick="open_edit_datos('<?=$dato->id?>','<?=$dato->telefono?>','<?=$dato->celular?>','<?=$dato->correo?>','<?=$dato->direccion?>')">Modificar</button></td>
                     </tr>
                     <?php
                     }
@@ -66,6 +69,12 @@
             <label for="telefono" class="col-sm-2 control-label">Telefono</label>
             <div class="col-sm-10">
               <input type="text" class="form-control" id="telefono_dt" name="telefono">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="celular" class="col-sm-2 control-label">Celular</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="celular_dt" name="celular">
             </div>
           </div>
           <div class="form-group">

@@ -265,16 +265,18 @@
         <div class="contenido_formulario">
             
             <!-- Si es por Webpay -->
-            <?php if ($data_post['metodo_pago']=="WEBPAY") { ?>
+            <?php
+            echo var_dump($WebPayResultado->token);
+             if ($data_post['metodo_pago']=="WEBPAY") { ?>
                 <!-- Si la conexion con Webpay se realiza correctamente -->
                 <?php if (isset($WebPayResultado->token) and !empty($WebPayResultado->token)) { ?>
                     <form action="<?php echo $WebPayResultado->url; ?>" method="POST">
                         <div class="row">
                             <div class="col-md-12">
-                                <?php // echo var_dump($data_post); ?> 
+                                <?php  echo var_dump($data_post); ?> 
                                 
-                                <input type="hidden" name="token_ws" value="<?php echo $WebPayResultado->token; ?>">
-                                <input type="submit" value="Pagar" class="btn btn-primary">
+                                <!--<input type="hidden" name="token_ws" value="<?php echo $WebPayResultado->token; ?>">
+                                <input type="submit" value="Pagar" class="btn btn-primary">-->
                                 
                             </div>
                         </div>
@@ -286,10 +288,10 @@
                 <form action="<?php echo base_url(); ?>index.php/Carro/ProcesarPago" method="POST">
                     <div class="row">
                         <div class="col-md-12">
-                            <?php // echo var_dump($data_post); ?> 
+                            <?php  echo var_dump($data_post); ?> 
                                     
-                            <input type="hidden" name="transferencia" value="SI">
-                            <input type="submit" value="Registrar Compra" class="btn btn-primary">
+                            <!--<input type="hidden" name="transferencia" value="SI">
+                            <input type="submit" value="Registrar Compra" class="btn btn-primary">-->
                                     
                         </div>
                     </div>

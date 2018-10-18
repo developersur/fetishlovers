@@ -38,20 +38,20 @@ class Usuario extends CI_Controller
 		 	$res = $this->UsuarioModel->crearUsuario($data);
 
 			if(!$res){
-				$data['error'] = '<div class="alert alert-danger"><i class="fas fa-exclamation-triangle"></i> Ya existe un correo asociado</div>';
+				$data['error'] = '<div class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i> Ya existe un correo asociado</div>';
 
 				$this->load->view('/template/head');
 				$this->load->view('login/login', $data);
 				$this->load->view('/template/footer');
 			}else {
-				$data['error'] = '<div class="alert alert-success"><i class="fas fa-check-circle"></i> Usuario registrado</div>';
+				$data['error'] = '<div class="alert alert-success"><i class="fa fa-check-circle"></i> Usuario registrado</div>';
 
 				$this->load->view('/template/head');
 				$this->load->view('login/login', $data);
 				$this->load->view('/template/footer');
 			}
 	 	}else {
-				$data['error'] = '<div class="alert alert-danger"><i class="fas fa-exclamation-triangle"></i> Contraseñas no coinciden</div>';
+				$data['error'] = '<div class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i> Contraseñas no coinciden</div>';
 
 			$this->load->view('/template/head');
 			$this->load->view('login/login', $data);

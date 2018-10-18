@@ -62,10 +62,16 @@
                 <div class="col-md-4">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <ul class="footer-links">
-                                <li><a href="#"><i class="fa fa-map-marker"></i>Dirección</a></li>
-                                <li><a href="#"><i class="fa fa-phone"></i>+569 12345678</a></li>
-                                <li><a href="#"><i class="fa fa-envelope"></i>contacto@fetishlovers.cl</a></li>
+                            <ul class="list-links">
+                                <?php
+                                $datos = $this->DatosModel->obtenerDatos();
+                                foreach($datos->result() as $dato)
+                                {
+                                    echo '<i class="fa fa-mobile"></i>&nbsp;+56'.$dato->celular.'<br>';
+                                    echo '<i class="fa fa-phone"></i>&nbsp;'.$dato->telefono.'<br>';
+                                    echo '<i class="fa fa-envelope"></i>&nbsp;'.$dato->correo.'<br>';
+                                    echo '<i class="fa fa-home"></i>&nbsp;'.$dato->direccion.'<br>';
+                                } ?>
                             </ul>
                         </div>
                     </div>

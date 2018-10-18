@@ -28,6 +28,10 @@
 	<link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>assets/css/menuadmin.css" />
 	<link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>assets/css/vista-producto.css" />
 	<link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>assets/css/porcategoria.css" />
+	<!--Jquery confirm-->
+	<link type="text/css" rel="stylesheet" href="<?php echo base_url(); ?>assets/css/jquery-confirm.css"/>
+	
+	
 
 	<script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
 

@@ -33,12 +33,12 @@
     <div class="row">
 
         <!-- Menu Izquierdo Usuario -->
-        <div class="col-sm-3 col-md-3">
+        <div class="">
             <?php $this->load->view('template/MenuAdmin'); ?>
         </div>
 
         <!-- Contenido Cliente -->
-        <div class="col-sm-9 col-md-9">
+        <div class="col-sm-9 col-md-9 col-md-offset-3">
           <fieldset>
           <legend class="text-center header">Listado Compras</legend>
               <div class="table-responsive">
