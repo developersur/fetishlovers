@@ -150,7 +150,7 @@
 					<!-- Search -->
 					<div class="header-search">
 						<form method="post" action="<?php echo base_url(); ?>index.php/Producto/buscaProducto">
-							<input class="input search-input" type="text" name="texto_buscar" placeholder="¿Qué estas buscando?">
+							<input class="input search-input" type="text" name="texto_buscar" placeholder="¿Qué estas buscando?" min="2" max="200">
 							<button class="search-btn"><i class="fa fa-search"></i></button>
 						</form>
 					</div>
@@ -180,7 +180,7 @@
 								<?php
 								}else{?>
 									<li><a href="<?php echo base_url(); ?>index.php/Login"><i class="fa fa-unlock-alt"></i>Login</a></li>
-									<li><a href="#"><i class="fa fa-user-plus"></i>Crear cuenta</a></li>
+									<li><a href="<?php echo base_url(); ?>index.php/Cliente/CrearCuenta"><i class="fa fa-user-plus"></i>Crear cuenta</a></li>
 								<?php } ?>
 							</ul>
 						</li>

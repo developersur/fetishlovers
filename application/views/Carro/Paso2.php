@@ -1,44 +1,44 @@
 
 <script type="text/javascript">
-
-// Muestra campos para facturacion
-$(document).ready(function () {
-    $("#tipo").change(function(e){
-        var tipo = $(this).val();
-        if(tipo=="Factura"){
-            $(".contenedor_facturacion").show();
-        } else {
-            $(".contenedor_facturacion").hide();
-        }
-    })
-});
-
-
-// Muestra regiones y comunas
-$(document).ready(function () {
-    
-    jQuery('.comunas').change(function () {
-        if (jQuery(this).val() == '') {
-            $("#nombre_comuna").html('');
-            $("#costo_visita").val('0');
-        } else {
-            var costo_visita = $(this).find(':selected').data('costo');
-            $("#nombre_comuna").html(jQuery(this).val());
-            $("#costo_visita").val(costo_visita);
-        }
+    // Muestra campos para facturacion
+    $(document).ready(function () {
+        $("#tipo").change(function(e){
+            var tipo = $(this).val();
+            if(tipo=="Factura"){
+                $(".contenedor_facturacion").show();
+            } else {
+                $(".contenedor_facturacion").hide();
+            }
+        })
     });
 
-    jQuery('.regiones').change(function () {
-        if (jQuery(this).val() == '') {
-        }
+    // Muestra regiones y comunas
+    $(document).ready(function () 
+    {
+        jQuery('.comunas').change(function () 
+        {
+            if (jQuery(this).val() == '') 
+            {
+                $("#nombre_comuna").html('');
+                $("#costo_visita").val('0');
+            } else {
+                var costo_visita = $(this).find(':selected').data('costo');
+                $("#nombre_comuna").html(jQuery(this).val());
+                $("#costo_visita").val(costo_visita);
+            }
+        });
+
+        jQuery('.regiones').change(function () {
+            if (jQuery(this).val() == '') {
+            }
+        });
     });
-});
 
     // Validad el Formulario por PHP
-    $(document).ready(function () {
-        
-
-        $(document).on("click","#Enviar", function (e) {
+    $(document).ready(function ()
+    {
+        $(document).on("click","#Enviar", function (e) 
+        {
             e.preventDefault();
             var  form = $("#Formulario");
 
@@ -65,7 +65,7 @@ $(document).ready(function () {
 
 </script>
         <?php 
-            $total_reservas = count($reservas);
+            /*$total_reservas = count($reservas);
             if($total_reservas>0) {
                 $r = true;
                 foreach ($reservas as $valor) {
@@ -79,13 +79,13 @@ $(document).ready(function () {
             if($r==true) {
                 $fechas = implode('","', $fechasarray);
                 $horas  = implode('","', $horasarray);
-            }
+            }*/
 
         ?>
 
 
         <script type="text/javascript">
-             $(document).ready(function () {
+             /*$(document).ready(function () {
                 
                 var hora_reservada = "";
                 
@@ -143,7 +143,7 @@ $(document).ready(function () {
                     }
                 });                   
 
-    		});
+    		});*/
         </script>         
     
     
@@ -165,9 +165,7 @@ $(document).ready(function () {
 </script>
 
                 
-        
 <div class="container" id="carrito_compra">
-
 
 <div id="resultados"></div>
 
@@ -198,7 +196,8 @@ $(document).ready(function () {
                                 </div>
                                 <div class="form-group">
                                     <label for="indicaciones_dir">Indicaciones</label>
-                                    <input type="text" class="form-control" id="indicaciones_dir" name="indicaciones_dir" value="<?php if(isset($datasesion)) echo $datasesion['indicaciones_dir']; ?>" placeholder="Indicaciones">
+                                    <textarea class="form-control" name="indicaciones_dir" id="indicaciones_dir" cols="15" rows="10" value="<?php if(isset($datasesion)) echo $datasesion['indicaciones_dir']; ?>"></textarea>
+                                    <!--<input type="text" class="form-control" id="indicaciones_dir" name="indicaciones_dir" value="<?php if(isset($datasesion)) echo $datasesion['indicaciones_dir']; ?>" placeholder="Indicaciones">-->
                                 </div>
                             </div>    
                             <div class="col-md-4">
@@ -210,10 +209,10 @@ $(document).ready(function () {
                                     <label for="calle_dir">Calle <span class="obligatorio">*</span></label>
                                     <input type="text" class="form-control" id="calle_dir" name="calle_dir" value="<?php if(isset($datasesion)) echo $datasesion['calle_dir']; ?>" placeholder="Calle">
                                 </div>
-                                <div class="form-group">
+                                <!--<div class="form-group">
                                     <label for="fecha_visita">Fecha de visita</label>
                                     <input type="text" class="form-control" id="fecha_visita" name="fecha_visita" value="<?php if(isset($datasesion)) echo $datasesion['fecha_visita']; ?>" placeholder="Fecha">
-                                </div>
+                                </div>-->
                             </div>  
                             <div class="col-md-4">
                                 <div class="form-group">
@@ -224,10 +223,10 @@ $(document).ready(function () {
                                     <label for="nro_calle_dir">Número <span class="obligatorio">*</span></label>
                                     <input type="text" class="form-control" id="nro_calle_dir" name="nro_calle_dir" value="<?php if(isset($datasesion)) echo $datasesion['nro_calle_dir']; ?>" placeholder="Nro Calle">
                                 </div>
-                                <div class="form-group">
+                                <!--<div class="form-group">
                                     <label for="hora_visita">Hora de visita</label>
                                     <input type="text" readonly="true" autocomplete="off" class="form-control" id="hora_visita" name="hora_visita" value="<?php if(isset($datasesion)) echo $datasesion['hora_visita']; ?>" placeholder="Hora" style="visibility: hidden;">
-                                </div>
+                                </div>-->
                             </div>
                     </div>
 
@@ -276,7 +275,7 @@ $(document).ready(function () {
 
 
                         <div class="col-md-12">
-                            <button type="submit" class="btn btn-default" id="Enviar">Continuar</button>
+                            <button type="submit" class="btn btn-info" id="Enviar">Continuar</button>
                         </div> 
                         <br>
                         <br>
@@ -293,6 +292,7 @@ $(document).ready(function () {
     </div>
 </div>
 </div>
+<br><br><br><br>
 
 
 <!-- Selector de Region y Comuna -->

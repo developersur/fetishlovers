@@ -72,9 +72,9 @@ class Carro extends CI_Controller
 		$this->form_validation->set_rules('sector_dir', 'Sector', 'required');
 		$this->form_validation->set_rules('calle_dir', 'Calle', 'required');
 		$this->form_validation->set_rules('nro_calle_dir', 'Nro calle', 'required');
-		if ($this->input->post('fecha_visita')!="") {
+		/*if ($this->input->post('fecha_visita')!="") {
 			$this->form_validation->set_rules('hora_visita', 'Hora de visita', 'required', array("required" => "Al seleccionar una fecha debe indicar la hora"));
-		}
+		}*/
 
 		// Si no se introducen los datos conrrectamente
 	    if ($this->form_validation->run() == FALSE){
@@ -160,8 +160,8 @@ class Carro extends CI_Controller
 			$calle_dir        = $_SESSION['datos_sesion']['calle_dir'];
 			$nro_calle_dir    = $_SESSION['datos_sesion']['nro_calle_dir'];
 			$indicaciones_dir = $_SESSION['datos_sesion']['indicaciones_dir'];
-			$fecha_visita     = $_SESSION['datos_sesion']['fecha_visita'];
-			$hora_visita      = $_SESSION['datos_sesion']['hora_visita'];
+			//$fecha_visita     = $_SESSION['datos_sesion']['fecha_visita'];
+			//$hora_visita      = $_SESSION['datos_sesion']['hora_visita'];
 			$metodo_pago      = $_SESSION['datos_sesion']['metodo_pago'];
 			$costo_visita     = $_SESSION['datos_sesion']['costo_visita'];
 			$descuento        = $_SESSION['datos_sesion']['descuento'];
@@ -195,8 +195,8 @@ class Carro extends CI_Controller
 			'calle_dir'        => $calle_dir,
 			'nro_calle_dir'    => $nro_calle_dir,
 			'indicaciones_dir' => $indicaciones_dir,
-			'fecha_visita'     => $fecha_visita,
-			'hora_visita'      => $hora_visita,
+			//'fecha_visita'     => $fecha_visita,
+			//'hora_visita'      => $hora_visita,
 			'metodo_pago'      => $metodo_pago,
 			'costo_visita'     => $costo_visita,
 			'descuento'        => $descuento
@@ -224,7 +224,7 @@ class Carro extends CI_Controller
 		}
 
 		// Carga Modelo
-		$this->load->model('ReservaModel');
+		//$this->load->model('ReservaModel');
 
 		// Paso 1 - Inicializa variables
 		$tipo          = "";
@@ -289,8 +289,8 @@ class Carro extends CI_Controller
 		$calle_dir        ="";
 		$nro_calle_dir    ="";
 		$indicaciones_dir ="";
-		$fecha_visita     ="";
-		$hora_visita      ="";
+		//$fecha_visita     ="";
+		//$hora_visita      ="";
 		$metodo_pago      ="";
 		$costo_visita     = 0;
 		$descuento        = 0;
@@ -303,8 +303,8 @@ class Carro extends CI_Controller
 			$calle_dir        = $_SESSION['datos_sesion']['calle_dir'];
 			$nro_calle_dir    = $_SESSION['datos_sesion']['nro_calle_dir'];
 			$indicaciones_dir = $_SESSION['datos_sesion']['indicaciones_dir'];
-			$fecha_visita     = $_SESSION['datos_sesion']['fecha_visita'];
-			$hora_visita      = $_SESSION['datos_sesion']['hora_visita'];
+			//$fecha_visita     = $_SESSION['datos_sesion']['fecha_visita'];
+			//$hora_visita      = $_SESSION['datos_sesion']['hora_visita'];
 			$metodo_pago      = $_SESSION['datos_sesion']['metodo_pago'];
 			$costo_visita     = $_SESSION['datos_sesion']['costo_visita'];
 			$descuento        = $_SESSION['datos_sesion']['descuento'];
@@ -338,8 +338,8 @@ class Carro extends CI_Controller
 			'calle_dir'        => $calle_dir,
 			'nro_calle_dir'    => $nro_calle_dir,
 			'indicaciones_dir' => $indicaciones_dir,
-			'fecha_visita'     => $fecha_visita,
-			'hora_visita'      => $hora_visita,
+			//'fecha_visita'     => $fecha_visita,
+			//'hora_visita'      => $hora_visita,
 			'metodo_pago'      => $metodo_pago,
 			'costo_visita'     => $costo_visita,
 			'descuento'        => $descuento
@@ -348,10 +348,10 @@ class Carro extends CI_Controller
 		$_SESSION['datos_sesion'] = $data_sesion;
 		//echo var_dump($_SESSION['datos_sesion']);
 
-		$data1['reservas'] = $this->ReservaModel->Reservas();
+		//$data1['reservas'] = $this->ReservaModel->Reservas();
 
 		$this->load->view('/template/head');
-		$this->load->view('Carro/Paso2',$data1);
+		$this->load->view('Carro/Paso2'/*,$data1*/);
 		$this->load->view('/template/footer');
 	}
 
@@ -406,8 +406,8 @@ class Carro extends CI_Controller
 		$calle_dir        = $_POST['calle_dir'];
 		$nro_calle_dir    = $_POST['nro_calle_dir'];
 		$indicaciones_dir = $_POST['indicaciones_dir'];
-		$fecha_visita     = $_POST['fecha_visita'];
-		$hora_visita      = $_POST['hora_visita'];
+		//$fecha_visita     = $_POST['fecha_visita'];
+		//$hora_visita      = $_POST['hora_visita'];
 		$metodo_pago      = $_POST['metodo_pago'];
 		$costo_visita     = $_POST['costo_visita'];
 		// Fin Paso 2 - Asigna valor Inicializa variables
@@ -447,8 +447,8 @@ class Carro extends CI_Controller
 			'calle_dir'        => $calle_dir,
 			'nro_calle_dir'    => $nro_calle_dir,
 			'indicaciones_dir' => $indicaciones_dir,
-			'fecha_visita'     => $fecha_visita,
-			'hora_visita'      => $hora_visita,
+			//'fecha_visita'     => $fecha_visita,
+			//'hora_visita'      => $hora_visita,
 			'metodo_pago'      => $metodo_pago,
 			'costo_visita'     => $costo_visita,
 			'descuento'        => $descuento
@@ -536,8 +536,8 @@ class Carro extends CI_Controller
 		// Carga Modelo
 		$this->load->model('WebpayModel');
 		$this->load->model('CompraModel');
-		$this->load->model('ReservaModel');
-		$this->load->model('CategoriaModel');
+		//$this->load->model('ReservaModel');
+		//$this->load->model('CategoriaModel');
 
 		// categorias para la pagina principal
 		$datac['categorias'] = $this->CategoriaModel->obtenerCategorias();
@@ -579,8 +579,8 @@ class Carro extends CI_Controller
 			$calle_dir        = $dcompra['calle_dir'];
 			$nro_calle_dir    = $dcompra['nro_calle_dir'];
 			$indicaciones_dir = $dcompra['indicaciones_dir'];
-			$fecha_visita     = $dcompra['fecha_visita'];
-			$hora_visita      = $dcompra['hora_visita'];
+			//$fecha_visita     = $dcompra['fecha_visita'];
+			//$hora_visita      = $dcompra['hora_visita'];
 			$metodo_pago      = $dcompra['metodo_pago'];
 			$costo_visita     = $dcompra['costo_visita'];
 			$descuento        = $dcompra['descuento'];
@@ -661,8 +661,8 @@ class Carro extends CI_Controller
 				"calle_dir"        => $calle_dir,
 				"nro_calle_dir"    => $nro_calle_dir,
 				"indicaciones_dir" => $indicaciones_dir,
-				"fecha_visita"     => $fecha_visita,
-				"hora_visita"      => $hora_visita,
+				//"fecha_visita"     => $fecha_visita,
+				//"hora_visita"      => $hora_visita,
 				"metodo_pago"      => $metodo_pago,
 				'status_compra'    => "REGISTRADA",
 				'status_pago'      => "SIN PROCESAR",
@@ -1382,8 +1382,8 @@ class Carro extends CI_Controller
 							"calle_dir"        => $calle_dir,
 							"nro_calle_dir"    => $nro_calle_dir,
 							"indicaciones_dir" => $indicaciones_dir,
-							"fecha_visita"     => $fecha_visita,
-							"hora_visita"      => $hora_visita,
+							//"fecha_visita"     => $fecha_visita,
+							//"hora_visita"      => $hora_visita,
 							"metodo_pago"      => $metodo_pago,
 							'status_compra'    => "ANULADA",
 							'status_pago'      => "PAGO ABORTADO",

@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Cliente extends CI_Controller
 {
 	public function __construct()
-  {
+    {
         parent::__construct();
         $this->load->model('CategoriaModel');
         $this->load->model('ClienteModel');
@@ -14,7 +14,9 @@ class Cliente extends CI_Controller
 		$this->load->model('DatosModel');
 		        date_default_timezone_set('America/Santiago');
                 
-	}
+    }
+    
+    
 
 	public function index(){
 
@@ -39,6 +41,11 @@ class Cliente extends CI_Controller
 				$this->load->view('template/footer');
     }
 
+    public function CrearCuenta(){
+        $this->load->view('template/head');
+		$this->load->view('Cliente/crearCuenta');
+		$this->load->view('template/footer');
+    }
 
 	public function ListarCompras(){
 

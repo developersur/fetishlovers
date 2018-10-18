@@ -2,14 +2,14 @@
 
 <div class="container" id="carrito_compra">
 
-<?php //echo var_dump($this->cart->contents()); ?>
-<div id="resultados"></div>
+    <?php //echo var_dump($this->cart->contents()); ?>
+    <div id="resultados"></div>
 
 <div class="row">
     <div class="col-md-12">
     <div class="pasos">
         <a href="<?php echo base_url(); ?>index.php/Carro/Paso1">Paso 1 - Complete su información</a> 
-        <a href="<?php echo base_url(); ?>index.php/Carro/Paso2">Paso 2 - Datos de la Instalación</a>
+        <!--<a href="<?php echo base_url(); ?>index.php/Carro/Paso2">Paso 2 - Datos de la Instalación</a>-->
         <span>Paso 3</span>
     </div>
     <fieldset>
@@ -194,14 +194,14 @@
                             <td align="right">Indicaciones:</td>
                             <td><?php echo $data_post['indicaciones_dir']; ?></td>
                         </tr>
-                        <tr>
+                        <!--<tr>
                             <td align="right">Fecha visita:</td>
                             <td><?php echo $data_post['fecha_visita']; ?></td>
                             <td align="right">Hora visita</td>
                             <td><?php echo $data_post['hora_visita']; ?></td>
                             <td align="right"></td>
                             <td></td>
-                        </tr>
+                        </tr>-->
                     </table>
                 </div>    
             </div>
@@ -278,7 +278,7 @@
                                 
                             </div>
                         </div>
-                    </form>
+                    </form><br><br>
                 <?php } ?>
             <?php } ?>
             <!-- Si es por Transferencia -->
@@ -293,7 +293,7 @@
                                     
                         </div>
                     </div>
-                </form>
+                </form><br><br>
             <?php } ?>
 
         </div>

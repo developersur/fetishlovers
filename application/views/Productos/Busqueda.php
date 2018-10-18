@@ -15,7 +15,7 @@
 				</div>
 				<!-- /section-title -->
 
-				<?php if(count($productos)>0) { ?>
+				<?php if(isset($productos)) { ?>
 					<?php foreach ($productos as $p) { ?>
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="product product-single product-hot">
@@ -64,7 +64,7 @@
 							</div>
 						</div>
 					<?php } ?>
-				<?php } ?>
+				<?php }else{ echo '<h4>No hay resultados para la búsqueda</h4><br><br><br><br>'; } ?>
 			<!-- /row -->
 		 </div>
 		<!-- /container -->

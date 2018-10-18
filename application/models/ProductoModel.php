@@ -176,44 +176,49 @@ class ProductoModel extends CI_Model {
 
     public function buscaProductos($data)
     {
-      $texto = $data['texto'];
+      $texto = htmlspecialchars(trim($data['texto']));
 
-      // ---------------------- //
-      $data_origin = str_replace(" ", "%", $texto);
-
-      // Separa las palabras en forma de array
-      $porciones = explode("%", $texto);
-
-      // Invierte las palabras
-      for ($i=count($porciones)-1; $i >= 0; $i--) {
-
-          $invertir[] = $porciones[$i];
-
-      }
-
-      $data_invertida = implode($invertir, "%");
-
-      $res = $this->db->query("select
-                                  producto.id_producto,
-                                  codigo,
-                                  producto.nombre,
-                                  producto.descripcion,
-                                  precio,
-                                  descuento,
-                                  marca,
-                                  cantidad,
-                                  producto.habilitado,
-                                  nuevo,
-                                  url as imagen
-                               from producto
-                               left join imagenes on imagenes.id_producto = producto.codigo
-                               where (nombre like '%".$data_origin."%' or nombre like '".$data_invertida."')
-                                  and habilitado='Si'
-                               group by producto.id_producto");
-
-      if($res->num_rows() > 0)
+      if(strlen($texto)>1)
       {
-        return $res->result_array();
+        // ---------------------- //
+        $data_origin = str_replace(" ", "%", $texto);
+
+        // Separa las palabras en forma de array
+        $porciones = explode("%", $texto);
+
+        // Invierte las palabras
+        for ($i=count($porciones)-1; $i >= 0; $i--) {
+
+            $invertir[] = $porciones[$i];
+
+        }
+
+        $data_invertida = implode($invertir, "%");
+
+        $res = $this->db->query("select
+                                    producto.id_producto,
+                                    codigo,
+                                    producto.nombre,
+                                    producto.descripcion,
+                                    precio,
+                                    descuento,
+                                    marca,
+                                    cantidad,
+                                    producto.habilitado,
+                                    nuevo,
+                                    url as imagen
+                                from producto
+                                left join imagenes on imagenes.id_producto = producto.codigo
+                                where (nombre like '%".$data_origin."%' or nombre like '".$data_invertida."')
+                                    and habilitado='Si'
+                                group by producto.id_producto");
+
+        if($res->num_rows() > 0)
+        {
+          return $res->result_array();
+        }else{
+          return false;
+        }
       }else{
         return false;
       }

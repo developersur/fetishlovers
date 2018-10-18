@@ -176,9 +176,16 @@ class Producto extends CI_Controller
 
 			$datos['productos'] = $this->ProductoModel->buscaProductos($data);
 
-			$this->load->view('/template/head');
-			$this->load->view('Productos/Busqueda',$datos);
-			$this->load->view('/template/footer');
+			if($datos['productos'] == false)
+			{
+				$this->load->view('/template/head');
+				$this->load->view('Productos/Busqueda');
+				$this->load->view('/template/footer');		
+			}else{
+				$this->load->view('/template/head');
+				$this->load->view('Productos/Busqueda',$datos);
+				$this->load->view('/template/footer');
+			}
 	 }
 
 	 public function editarProducto()
