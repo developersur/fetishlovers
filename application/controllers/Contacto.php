@@ -47,7 +47,7 @@ class Contacto extends CI_Controller
       $config["smtp_user"] = 'notificador@fetishlovers.cl';
 
      //Nuestra contraseña
-      $config["smtp_pass"] = 'notifetishlo';
+      $config["smtp_pass"] = 'fetishlo2018*';
 
      //El puerto que utilizará el servidor smtp
       $config["smtp_port"] = '465';

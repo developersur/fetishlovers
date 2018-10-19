@@ -831,7 +831,7 @@ class Carro extends CI_Controller
 			if($todo_bien==TRUE) {
 
 				// Inicio Registra la reserva
-				if($fecha_visita!="" and $hora_visita!="") {
+				/*if($fecha_visita!="" and $hora_visita!="") {
 
 					$fecha_visita_formateada = date('Y-m-d', strtotime($fecha_visita));
 
@@ -841,7 +841,7 @@ class Carro extends CI_Controller
 						'id_compra' => $id_compra
 					);
 					$this->ReservaModel->Registrar($datos_reserva);
-				}
+				}*/
 				// Fin Registra la reserva
 
 				$compra_detalle = $this->CompraModel->ProductosCompra($id_compra);
@@ -993,14 +993,6 @@ class Carro extends CI_Controller
 					<td style='padding: 8px; border-top: 1px solid #999; min-width: 200px'><b>$nro_calle_dir</b></td>
 					<td style='padding: 8px; border-top: 1px solid #999; text-align: right;'>Indicaciones</td>
 					<td style='padding: 8px; border-top: 1px solid #999; min-width: 200px'><b>$indicaciones_dir</b></td>
-				</tr>
-				<tr>
-					<td style='padding: 8px; border-top: 1px solid #999; text-align: right;'>Fecha visita:</td>
-					<td style='padding: 8px; border-top: 1px solid #999; min-width: 200px'><b>$fecha_visita</b></td>
-					<td style='padding: 8px; border-top: 1px solid #999; text-align: right;'>Hora visita:</td>
-					<td style='padding: 8px; border-top: 1px solid #999; min-width: 200px'><b>$hora_visita</b></td>
-					<td style='padding: 8px; border-top: 1px solid #999; text-align: right;'></td>
-					<td style='padding: 8px; border-top: 1px solid #999; min-width: 200px'><b></b></td>
 				</tr>
 				</table>";
 
@@ -1194,9 +1186,9 @@ class Carro extends CI_Controller
 				// Correo a soporte
 				$this->email->initialize($configSMTP);
 				$this->email->from($from,$sistema);
-				$this->email->to("alexi_evanescence@hotmail.com");
-				//$this->email->to($correos_para);
-				//$this->email->cc($notificar_redelect);
+				//$this->email->to("soporte1@pacifik.cl");
+				$this->email->to($correos_para);
+				$this->email->cc($notificar_redelect);
 				$this->email->subject($asunto);
 				$this->email->reply_to($notificar_redelect);
 				$this->email->message($htmlContent);

@@ -233,7 +233,7 @@
                             <td align="right">Método de Pago:</td>
                             <td><?php echo $data_post['metodo_pago']; ?> <img src="<?php echo base_url(); ?>/assets/img/icono_transferencia.png" width="30px"></td>
                             <td align="right">Tiempo de espera por confirmación:</td>
-                            <td colspan="3">Entre 24 y 48 horas habiles</td>
+                            <td colspan="3">Entre 24 y 48 horas hábiles</td>
                         </tr>
                         <tr>
                             <td align="right">Información</td>
@@ -266,7 +266,7 @@
             
             <!-- Si es por Webpay -->
             <?php
-            echo var_dump($WebPayResultado->token);
+            //echo var_dump($WebPayResultado->token);
              if ($data_post['metodo_pago']=="WEBPAY") { ?>
                 <!-- Si la conexion con Webpay se realiza correctamente -->
                 <?php if (isset($WebPayResultado->token) and !empty($WebPayResultado->token)) { ?>
@@ -288,10 +288,10 @@
                 <form action="<?php echo base_url(); ?>index.php/Carro/ProcesarPago" method="POST">
                     <div class="row">
                         <div class="col-md-12">
-                            <?php  echo var_dump($data_post); ?> 
+                            <?php  //echo var_dump($data_post); ?> 
                                     
-                            <!--<input type="hidden" name="transferencia" value="SI">
-                            <input type="submit" value="Registrar Compra" class="btn btn-primary">-->
+                            <input type="hidden" name="transferencia" value="SI">
+                            <input type="submit" value="Registrar Compra" class="btn btn-primary">
                                     
                         </div>
                     </div>
