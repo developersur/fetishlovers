@@ -25,7 +25,6 @@ class Inicio extends CI_Controller
 		$data['productos_ofertas'] = $this->ProductoModel->ListarOfertas();
 
 		$this->load->view('/template/head');
-		//$this->load->view('home');
 		$this->load->view('/Productos/Principal',$data);
 		$this->load->view('/template/footer');
 	}

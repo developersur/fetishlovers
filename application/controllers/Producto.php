@@ -133,9 +133,9 @@ class Producto extends CI_Controller
 	}
 
 
-	public function Categoria()
+	public function Categoria($categoria)
 	{
-		$id_categoria = $_GET['id_categoria'];
+		$id_categoria = $categoria;//$_GET['id_categoria'];
 
 		$data['id_categoria'] = $id_categoria;
 		$data['categorias']   = $this->CategoriaModel->obtenerCategoriasActivas();

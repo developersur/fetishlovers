@@ -6,8 +6,14 @@ class ProductoModel extends CI_Model {
         parent::__construct();
         $this->db = $this->load->database('default',true);
     }
+     
+    public function get_total() 
+    {
+        return $this->db->count_all("producto");
+    }
 
-    public function ListarPrincipal(){
+    public function ListarPrincipal()
+    {
       $result_set = $this->db->query("
         select
           producto.id_producto,
@@ -29,7 +35,9 @@ class ProductoModel extends CI_Model {
     	return $result_set -> result_array();
     }
 
-    public function ListarDestacados(){
+    public function ListarDestacados()
+    {
+
       $result_set = $this->db->query("
         select
           producto.id_producto,
@@ -51,7 +59,8 @@ class ProductoModel extends CI_Model {
     	return $result_set -> result_array();
     }
 
-    public function ListarOfertas(){
+    public function ListarOfertas()
+    {
       $result_set = $this->db->query("
         select
           producto.id_producto,

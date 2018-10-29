@@ -223,7 +223,7 @@
 						//$this->load->model('CategoriaModel');
 						$categorias = $this->CategoriaModel->obtenerCategoriasActivas();
 						foreach($categorias->result() as $categoria) { ?>
-							<li><a href="<?php echo base_url(); ?>index.php/Producto/Categoria?id_categoria=<?php echo $categoria->id; ?>"><?php echo $categoria->nombre; ?></a></li>
+							<li><a href="<?php echo base_url(); ?>index.php/Producto/Categoria/<?php echo $categoria->id; ?>"><?php echo $categoria->nombre; ?></a></li>
 						<?php }
 					?>
 					</ul>

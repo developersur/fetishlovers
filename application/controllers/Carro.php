@@ -684,7 +684,9 @@ class Carro extends CI_Controller
 
 						// ------- WEBPAY ------- //
 						require_once('assets/webpay/libwebpay/webpay.php');
-						require_once('assets/webpay/certificates/cert-normal.php');
+						//require_once('assets/webpay/certificates/cert-normal.php');
+						require_once('assets/webpay/sample/certificates/cert-normal.php');
+						
 						require_once('assets/webpay/iniciar.php');
 
 						$token = filter_input(INPUT_POST, 'token_ws');
