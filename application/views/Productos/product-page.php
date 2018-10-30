@@ -10,7 +10,8 @@
 					<div class="col-md-6">
 						<div id="product-main-view">
 							<?php if(count($producto)>0) { ?>
-								<?php foreach ($producto as $p) { ?>
+								<?php foreach ($producto as $p) 
+								{ ?>
 									<div class="product-view">
 										<img src="<?php echo $p["imagen"]; ?>" height="400" alt="">
 									</div>
@@ -19,7 +20,7 @@
 									$descuento = $p['descuento'];
 									$nombre = $p['nombre'];
 									$descripcion = $p['descripcion'];
-									$precio = $p['precio'];
+									$precio_descuento = $p['precio']-(($p['precio']*$p['descuento'])/100);
 									?>
 								<?php } ?>
 							<?php } ?>
@@ -45,10 +46,10 @@
 								<?php } ?>
 							</div>
 							<h2 class="product-name"><?php echo $nombre; ?></h2>
-							<h3 class="product-price">$<?php echo number_format($p['precio']-(($p['precio']*$p['descuento'])/100),'0',',','.'); ?>
+							<h3 class="product-price">$<?php echo number_format($precio_descuento,'0',',','.'); ?>
 								<?php if($descuento!=0) { ?>
 									<del class="product-old-price">
-											$<?php echo number_format($precio,0,',','.'); ?>
+											$<?php echo number_format($p['precio'],0,',','.'); ?>
 									</del>
 								<?php } ?>
 							</h3>
@@ -70,7 +71,7 @@
 										<input type="hidden" name="codigo_producto" id="codigo_producto" value="<?php echo $p['id_producto']; ?>">
 										<input type="hidden" name="nombre_producto" id="nombre_producto" value="<?php echo $p['nombre']; ?>">
 										<input type="hidden" name="descripcion_producto" id="descripcion_producto" value="<?php echo $p['descripcion']; ?>">
-										<input type="hidden" name="precio_producto" id="precio_producto" value="<?php echo round($p['precio']-(($p['precio']*$p['descuento'])/100)); ?>">
+										<input type="hidden" name="precio_producto" id="precio_producto" value="<?php echo round($precio_descuento); ?>">
 										<input type="hidden" name="imagen_producto" id="imagen_producto" value="<?php echo $p['imagen']; ?>">
 											<div class="qty-input">
 												<span class="text-uppercase">Cantidad: </span>

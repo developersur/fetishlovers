@@ -53,7 +53,7 @@ class ProductoModel extends CI_Model {
           url as imagen
         from producto
         left join imagenes on imagenes.id_producto = producto.codigo
-        where producto.habilitado = 'Si' and producto.nuevo = 'Si'
+        where producto.habilitado = 'Si' and producto.nuevo = 'Si' and descuento = 0
         group by producto.id_producto
         ");
     	return $result_set -> result_array();

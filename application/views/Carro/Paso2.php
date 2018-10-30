@@ -177,7 +177,7 @@
     </div>
 
     <fieldset>
-    <legend class="text-center header titulo">Paso 2 - Datos de la Instalación</legend>
+    <legend class="text-center header titulo">Paso 2 - Datos de envío</legend>
         
         <div class="mensaje_validacion"></div>  
         
@@ -194,11 +194,7 @@
                                     <label for="sector_dir">Sector <span class="obligatorio">*</span></label>
                                     <input type="text" class="form-control" id="sector_dir" name="sector_dir" value="<?php if(isset($datasesion)) echo $datasesion['sector_dir']; ?>" placeholder="Sector">
                                 </div>
-                                <div class="form-group">
-                                    <label for="indicaciones_dir">Indicaciones</label>
-                                    <textarea class="form-control" name="indicaciones_dir" id="indicaciones_dir" cols="15" rows="10" value="<?php if(isset($datasesion)) echo $datasesion['indicaciones_dir']; ?>"></textarea>
-                                    <!--<input type="text" class="form-control" id="indicaciones_dir" name="indicaciones_dir" value="<?php if(isset($datasesion)) echo $datasesion['indicaciones_dir']; ?>" placeholder="Indicaciones">-->
-                                </div>
+                                
                             </div>    
                             <div class="col-md-4">
                                 <div class="form-group">
@@ -227,6 +223,13 @@
                                     <label for="hora_visita">Hora de visita</label>
                                     <input type="text" readonly="true" autocomplete="off" class="form-control" id="hora_visita" name="hora_visita" value="<?php if(isset($datasesion)) echo $datasesion['hora_visita']; ?>" placeholder="Hora" style="visibility: hidden;">
                                 </div>-->
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="indicaciones_dir">Indicaciones</label>
+                                    <textarea class="form-control" name="indicaciones_dir" id="indicaciones_dir" cols="10" rows="4" value="<?php if(isset($datasesion)) echo $datasesion['indicaciones_dir']; ?>"></textarea>
+                                    <!--<input type="text" class="form-control" id="indicaciones_dir" name="indicaciones_dir" value="<?php if(isset($datasesion)) echo $datasesion['indicaciones_dir']; ?>" placeholder="Indicaciones">-->
+                                </div>
                             </div>
                     </div>
 
