@@ -1,5 +1,5 @@
 <div class="container" id="carrito_compra">
-    
+
 
     <?php //echo var_dump($this->cart->contents()); ?>
     <div id="resultados"></div>
@@ -33,10 +33,10 @@
                                 <td align="right">$<?php echo number_format($p["price"],'0',',','.'); ?></td>
                                 <td>
                                     <input type="number" name="cantidad" class="form-control InputCantidad" value="<?php echo $p["qty"]; ?>" rowid="<?php echo $p["rowid"]; ?>" action="<?php echo base_url();?>index.php/Carro/Actualizar">
-                                    <a href="<?php echo base_url(); ?>index.php/Carro/"><i class="fas fa-redo-alt"></i></a>
+                                    <a href="<?php echo base_url(); ?>index.php/Carro/"><i class="fa fa-redo-alt"></i></a>
                                 </td>
                                 <td align="right">$<?php echo number_format($p["subtotal"],'0',',','.'); ?></td>
-                                <td><a href="#" class="Quitar" action="<?php echo base_url();?>index.php/Carro/Quitar" rowid="<?php echo $p["rowid"]; ?>"><i class="fas fa-trash-alt"></i></a></td>
+                                <td><a href="#" class="Quitar" action="<?php echo base_url();?>index.php/Carro/Quitar" rowid="<?php echo $p["rowid"]; ?>"><i class="fa fa-trash-alt"></i></a></td>
                             </tr>
                             <?php } ?>
                             <?php } else { ?>
@@ -55,14 +55,14 @@
                                 <td></td>
                             </tr>
                     </table>
-                    
+
                     <div style="text-align: right; margin-bottom: 100px;">
                     <?php if(isset($productosC) and count($productosC)>0) { ?>
                         <a href="<?php echo base_url(); ?>index.php/Carro/Paso1" class="btn btn-primary">Continuar con la compra</a>
                     <?php } ?>
                     </div>
-                
-                </div>    
+
+                </div>
             </div>
         </fieldset>
         </div>

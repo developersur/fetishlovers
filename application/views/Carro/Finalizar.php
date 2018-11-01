@@ -8,22 +8,22 @@
 <div class="row">
     <div class="col-md-9 col-md-offset-3">
     <div class="pasos">
-        <a href="<?php echo base_url(); ?>index.php/Carro/">Volver al Carrito</a> 
+        <a href="<?php echo base_url(); ?>index.php/Carro/">Volver al Carrito</a>
     </div>
-    
+
     <fieldset>
     <legend class="text-center header titulo">Pago Proceso</legend>
-            
+
         <?php if(isset($error) and $error!="") { ?>
             <h4>Atención</h4>
-            <div class="alert alert-warning"><i class="fas fa-exclamation-triangle"></i>
+            <div class="alert alert-warning"><i class="fa fa-exclamation-triangle"></i>
                 <?php echo $error; ?>
             </div>
         <?php } ?>
 
         <?php if(isset($mensaje) and $mensaje!="") { ?>
             <h4>Resultado</h4>
-            <div class="alert alert-success"><i class="fas fa-check-circle"></i>
+            <div class="alert alert-success"><i class="fa fa-check-circle"></i>
                 <?php echo $mensaje; ?>
             </div>
             <?php if(isset($voucher) and $voucher==TRUE) { ?>

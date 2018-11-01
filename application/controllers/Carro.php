@@ -146,7 +146,7 @@ class Carro extends CI_Controller
 		$calle_dir        ="";
 		$nro_calle_dir    ="";
 		$indicaciones_dir ="";
-		$fecha_visita     ="";
+		//$fecha_visita     ="";
 		$hora_visita      ="";
 		$metodo_pago      ="";
 		$costo_visita     = 0;
@@ -686,7 +686,7 @@ class Carro extends CI_Controller
 						require_once('assets/webpay/libwebpay/webpay.php');
 						//require_once('assets/webpay/certificates/cert-normal.php');
 						require_once('assets/webpay/sample/certificates/cert-normal.php');
-						
+
 						require_once('assets/webpay/iniciar.php');
 
 						$token = filter_input(INPUT_POST, 'token_ws');
@@ -1246,7 +1246,8 @@ class Carro extends CI_Controller
 			$verificatoken = $this->WebpayModel->VerficarPagoToken($token_anulado);
 
 			// Si no esta registrado es la primera vez que cancela el pago por lo tanto se guarda
-			if (count($verificatoken)<=0) {
+			if (count($verificatoken)<=0)
+			{
 
 				// --- REGISTRA EL PAGO CANCELADO POR EL USUARIO --- //
 				// Calculo la fecha actual con el formato de la BD ya que al ser anulada no me devuelve la fecha webpay
@@ -1296,8 +1297,8 @@ class Carro extends CI_Controller
 						$calle_dir        = $dcompra['calle_dir'];
 						$nro_calle_dir    = $dcompra['nro_calle_dir'];
 						$indicaciones_dir = $dcompra['indicaciones_dir'];
-						$fecha_visita     = $dcompra['fecha_visita'];
-						$hora_visita      = $dcompra['hora_visita'];
+						//$fecha_visita     = $dcompra['fecha_visita'];
+						//$hora_visita      = $dcompra['hora_visita'];
 						$metodo_pago      = $dcompra['metodo_pago'];
 						$costo_visita     = $dcompra['costo_visita'];
 						$descuento        = $dcompra['descuento'];
