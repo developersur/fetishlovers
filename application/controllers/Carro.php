@@ -1233,8 +1233,8 @@ class Carro extends CI_Controller
 		}
 
 		// El Cliente presiono el boton "Anular"
-		if(isset($_POST['TBK_TOKEN']) and isset($_POST['TBK_ID_SESION']) and isset($_POST['TBK_ORDEN_COMPRA'])) {
-
+		if(isset($_POST['TBK_TOKEN']) and isset($_POST['TBK_ID_SESION']) and isset($_POST['TBK_ORDEN_COMPRA']))
+		{
 			// Carga Modelo
 			$this->load->model('WebpayModel');
 			$this->load->model('CompraModel');
@@ -1476,9 +1476,14 @@ class Carro extends CI_Controller
 			}
 		}
 
-		$this->load->view('/template/head');
-		$this->load->view('Carro/Finalizar',$data);
-		$this->load->view('/template/footer');
+		if(isset($data))
+		{
+			$this->load->view('/template/head');
+			$this->load->view('Carro/Finalizar',$data);
+			$this->load->view('/template/footer');
+		}else{
+			header("Location: ".base_url()."index.php/Carro/");
+		}
 	}
 
 
