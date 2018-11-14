@@ -7,7 +7,7 @@
 		'smtp_host'   => 'ssl://mail.fetishlovers.cl',
 		'smtp_port'   => 465,
 		'smtp_user'   => 'notificador@fetishlovers.cl',
-		'smtp_pass'   => 'fetishlo2018*',
+		'smtp_pass'   => '#notificadorfl2333*',
 		'mailtype'    => 'html',
 		'charset'     => 'utf-8',
 		'newline'     => "\r\n",
@@ -49,6 +49,6 @@
 	$config['tipo_cuenta']    = "Corriente";
 	
 	// Correo al que se deben notificar los pagos
-	$config['notificar_pago'] = "pagos@redelect";
+	$config['notificar_pago'] = "pagos@redelect.cl";
 
 ?>

@@ -78,7 +78,7 @@
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star-o empty"></i>
 									</div>
-									<h2 class="product-name"><a href="#"><?php echo $p['nombre']; ?></a></h2>
+									<h2 class="product-name"><a href="<?php echo base_url(); ?>index.php/Producto/vistaProducto/<?php echo $p["codigo"];?>"><?php echo $p['nombre']; ?></a></h2>
 									<div class="product-btns">
 										<form action="<?php echo base_url(); ?>index.php/Carro/Agregar" method="POST" class="Form_Agregar">
 												<input type="hidden" name="id_producto" id="codigo_producto" value="<?php echo $p['id_producto']; ?>">
@@ -145,7 +145,7 @@
 										<i class="fa fa-star"></i>
 										<i class="fa fa-star-o empty"></i>
 									</div>
-									<h2 class="product-name"><a href="#"><?php echo $p['nombre']; ?></a></h2>
+									<h2 class="product-name"><a href="<?php echo base_url(); ?>index.php/Producto/vistaProducto/<?php echo $p["codigo"];?>"><?php echo $p['nombre']; ?></a></h2>
 									<div class="product-btns">
 										<form action="<?php echo base_url(); ?>index.php/Carro/Agregar" method="POST" class="Form_Agregar">
 												<input type="hidden" name="id_producto" id="codigo_producto" value="<?php echo $p['id_producto']; ?>">

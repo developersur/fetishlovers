@@ -55,6 +55,7 @@ class ProductoModel extends CI_Model {
         left join imagenes on imagenes.id_producto = producto.codigo
         where producto.habilitado = 'Si' and producto.nuevo = 'Si' and descuento = 0
         group by producto.id_producto
+        limit 20
         ");
     	return $result_set -> result_array();
     }
@@ -78,6 +79,7 @@ class ProductoModel extends CI_Model {
         left join imagenes on imagenes.id_producto = producto.codigo
         where producto.habilitado = 'Si' and producto.descuento > 0
         group by producto.id_producto
+        limit 20
         ");
     	return $result_set -> result_array();
     }
