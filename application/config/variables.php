@@ -49,6 +49,6 @@
 	$config['tipo_cuenta']    = "Corriente";
 	
 	// Correo al que se deben notificar los pagos
-	$config['notificar_pago'] = "pagos@redelect.cl";
+	$config['notificar_pago'] = "pagos@fetishlovers.cl";
 
 ?>

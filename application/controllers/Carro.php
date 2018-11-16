@@ -468,8 +468,8 @@ class Carro extends CI_Controller
 
 		// ------- WEBPAY ------- //
 		require_once('assets/webpay/libwebpay/webpay.php');
-		//require_once('assets/webpay/certificates/cert-normal.php');
-		require_once('assets/webpay/sample/certificates/cert-normal.php');
+		require_once('assets/webpay/certificates/cert-normal.php');
+		//require_once('assets/webpay/sample/certificates/cert-normal.php');
 		require_once('assets/webpay/iniciar.php');
 
 
@@ -684,8 +684,8 @@ class Carro extends CI_Controller
 
 						// ------- WEBPAY ------- //
 						require_once('assets/webpay/libwebpay/webpay.php');
-						//require_once('assets/webpay/certificates/cert-normal.php');
-						require_once('assets/webpay/sample/certificates/cert-normal.php');
+						require_once('assets/webpay/certificates/cert-normal.php');
+						//require_once('assets/webpay/sample/certificates/cert-normal.php');
 
 						require_once('assets/webpay/iniciar.php');
 
@@ -693,7 +693,7 @@ class Carro extends CI_Controller
 
 						// Rescatamos resultado y datos de la transaccion
 						$WebPayResultado = $webpay->getNormalTransaction()->getTransactionResult($token);
-
+//var_dump($WebPayResultado);
 						// Se verificamos el resultado de la transacción
 						if(isset($WebPayResultado->detailOutput->responseCode))  {
 

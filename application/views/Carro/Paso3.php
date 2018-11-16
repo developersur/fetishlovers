@@ -266,7 +266,7 @@
             
             <!-- Si es por Webpay -->
             <?php
-            //echo var_dump($WebPayResultado->token);
+             echo var_dump($WebPayResultado);
              if ($data_post['metodo_pago']=="WEBPAY") { ?>
                 <!-- Si la conexion con Webpay se realiza correctamente -->
                 <?php if (isset($WebPayResultado->token) and !empty($WebPayResultado->token)) { ?>
