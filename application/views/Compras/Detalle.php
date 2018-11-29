@@ -140,10 +140,10 @@
 
 <div class="container" id="menuadmin">
     <div class="row">
-        <div class="col-sm-3 col-md-3">
+        <div class="">
             <?php $this->load->view('template/MenuAdmin'); ?>
         </div>
-        <div class="col-sm-9 col-md-9">
+        <div class="col-sm-9 col-md-9 col-md-offset-3">
           <fieldset>
           <legend class="text-center header">Detalle de la Compra #<?php echo $id_compra; ?></legend>
             
@@ -186,12 +186,12 @@
                             <td align="right">Status Actual:</td>
                             <td class="<?php echo $color_statuscompra; ?>">
                                 <b><?php echo $data_post['status_compra']; ?></b>
-                                <a href='#' id='CambiarStatusCompra'><i class="fas fa-edit"></i></a>
+                                <a href='#' id='CambiarStatusCompra'><i class="fa fa-edit"></i></a>
                             </td>
                             <td align="right">Status Pago:</td>
                             <td class="<?php echo $color_statuspago; ?>">
                                 <b><?php echo $data_post['status_pago']; ?></b>
-                                <a href='#' id='CambiarStatusPago'><i class="fas fa-edit"></i></a>
+                                <a href='#' id='CambiarStatusPago'><i class="fa fa-edit"></i></a>
                             </td>
                         </tr>
                     </table>

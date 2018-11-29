@@ -4,7 +4,7 @@
     // Validador de RUT
     $(document).ready(function(){
         // Valida el Rut del Logeo
-        $('.input_rut').rut();
+        //$('.input_rut').rut();
         
         /*
         $('.input_rut').rut({
@@ -124,7 +124,7 @@
                                     <label for="rut">Tipo de comprobante <span class="obligatorio">*</span></label>
                                     <select name="tipo" id="tipo" class="form-control">
                                         <option value="Boleta">Boleta</option>
-                                        <option value="Factura">Factura</option>
+                                        <!--<option value="Factura">Factura</option>-->
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -134,7 +134,7 @@
                             </div>    
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <label for="rut_con">RUT <span class="obligatorio">*</span></label>
+                                    <label for="rut_con">RUT <!--<span class="obligatorio">*</span>--></label>
                                     <input type="text" class="form-control input_rut" id="rut_con" name="rut_con" value="<?php if(isset($datasesion)) echo $datasesion['rut_con']; ?>" placeholder="RUT">
                                 </div>
                                 <div class="form-group">

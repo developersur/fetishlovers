@@ -28,7 +28,7 @@ class Carro extends CI_Controller
 		// Validacion
 		$this->form_validation->set_error_delimiters('<i class="fas fa-exclamation-triangle"></i> ', '<br>');
 		$this->form_validation->set_rules('tipo', 'Tipo', 'required');
-		$this->form_validation->set_rules('rut_con', 'RUT', 'required|min_length[8]|max_length[13]');
+		//$this->form_validation->set_rules('rut_con', 'RUT', 'required|min_length[8]|max_length[13]');
 		$this->form_validation->set_rules('nombre_con', 'Nombre contacto', 'required|min_length[4]');
 		$this->form_validation->set_rules('telefono_con', 'Teléfono/Celular contacto', 'required|min_length[9]|max_length[20]|numeric');
 		$this->form_validation->set_rules('correo_con', 'Correo contacto', 'required|valid_email');
